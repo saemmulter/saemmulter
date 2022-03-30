@@ -14,7 +14,9 @@
     "autoprefixer": "^10.4.4",
     "next": "12.1.0",
     "react": "17.0.2",
+    "react-device-detect": "^2.1.2",
     "react-dom": "17.0.2",
+    "react-responsive": "^9.0.0-beta.6",
     "react-slick": "^0.28.1",
     "sass": "^1.49.9"
   },
@@ -23,7 +25,7 @@
     "eslint-config-next": "12.1.0"
   },
   "browserslist": [
-    "not dead",
-    "ie 6-11"
+    "ie 6-11",
+    "not dead"
   ]
 }
