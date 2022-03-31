@@ -1,0 +1,141 @@
+$padding-horizontal: 15
+$default-width: 1250
+$total-width: $padding-horizontal * 2 + $default-width
+
+$browser-context: 16
+
+@function rem($pixel, $context: $browser-context)
+  @return #{$pixel/$context}rem
+
+@function em($pixel, $context: $browser-context)
+  @return #{$pixel/$context}em
+
+=mq($mediaquery)
+  @if $mediaquery == 'maxMobile'
+    @media screen and (max-width: Rem(480))
+      @content
+
+  @if $mediaquery == 'maxMobile'
+    @media screen and (min-width: Rem(481))
+      @content
+
+  @if $mediaquery == 'maxTablet'
+    @media screen and (max-width: Rem(768))
+      @content
+
+  @if $mediaquery == 'minXsmall'
+    @media screen and (min-width: Rem(769))
+      @content
+
+  @if $mediaquery == 'maxXsmall'
+    @media screen and (max-width: Rem(1024))
+      @content
+
+  @if $mediaquery == 'minSmall'
+    @media screen and (min-width: Rem(1025))
+      @content
+
+  @if $mediaquery == 'maxSmall'
+    @media screen and (max-width: Rem(1200))
+      @content
+
+  @if $mediaquery == 'minLarge'
+    @media screen and (min-width: Rem(1201))
+      @content
+
+  @if $mediaquery == 'maxLarge'
+    @media screen and (max-width: Rem(1280))
+      @content
+
+  @if $mediaquery == 'minXlarge'
+    @media screen and (min-width: Rem(1281))
+      @content
+
+=font-weight($weight)
+  @if $weight == 'thin'
+    font-weight: 100
+
+  @if $weight == 'extraLight'
+    font-weight: 200
+
+  @if $weight == 'light'
+    font-weight: 300
+
+  @if $weight == 'regular'
+    font-weight: 400
+
+  @if $weight == 'medium'
+    font-weight: 500
+
+  @if $weight == 'semiBold'
+    font-weight: 600
+
+  @if $weight == 'bold'
+    font-weight: 700
+
+  @if $weight == 'extraBold'
+    font-weight: 800
+
+  @if $weight == 'black'
+    font-weight: 900
+
+=color($color)
+  @if $color == 'black'
+    color: #000
+
+  @if $color == 'white'
+    color: #FFF
+
+  @if $color == 'default'
+    color: #5A433D
+
+  @if $color == 'accent'
+    color: #1EBBEF
+
+  @if $color == 'primary'
+    color: rgba(90, 67, 61, 0.7)
+
+=style($style)
+  @if $style == 'widthSettings'
+    margin: 0 auto
+    padding-right: Rem(paddingHorizontal)
+    padding-left: Rem(paddingHorizontal)
+    width: 100%
+    max-width: Rem(totalWidth)
+
+  @if $style == 'col'
+    display: block
+    flex: 1 0 0%
+    width: 100%
+    max-width: 100%
+
+  @if $style == 'ellipsis'
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+
+  @if $style == 'clearfix'
+    &::after
+      display: block
+      clear: both
+      content: ''
+
+  @if $style == 'screenReaderOnly'
+    position: absolute
+    width: 1px
+    height: 1px
+    padding: 0
+    overflow: hidden
+    clip: rect(0,0,0,0)
+    white-space: nowrap
+    clip-path: inset(50%)
+    border: 0
+
+=clamp($clamp, $maxheight, $lineheight)
+  overflow: hidden
+  text-overflow: ellipsis
+  display: -webkit-box
+  -webkit-box-orient: vertical
+  -webkit-line-clamp: $line
+  max-height: $height / 16rem
+  line-height: $lineheight
