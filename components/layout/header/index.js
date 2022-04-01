@@ -1,7 +1,9 @@
 import Link from 'next/link';
-import LinkButton from '../../utilities/linkButton';
 import { useTranslation } from 'react-i18next';
 import styled from '@emotion/styled';
+import LinkButton from '../../utilities/linkButton';
+import { images } from '../../../assets/images';
+import styles from '../../../styles/Header.module.sass';
 
 const Container = styled.header({
   width: '100%',
@@ -12,11 +14,24 @@ const Contents = styled.div({
   width: '100%',
 });
 
+const Identity = styled.i({
+  display: 'block',
+  background: `url(${images.logos.en.saemmulter}) no-repeat 0 50%/contain`,
+  width: '100%',
+  height: '100%',
+});
+
 function Header() {
   const { t } = useTranslation('common');
   return (
     <Container>
-      <Contents>
+      <Contents className={styles.container}>
+        <h1>
+          <LinkButton href='/'>
+            <span>샘물터</span>
+            <Identity />
+          </LinkButton>
+        </h1>
         <LinkButton href='/company'>{t('header.company')}</LinkButton>
         <LinkButton href='/products'>{t('header.products')}</LinkButton>
         <LinkButton href='/pr-center'>{t('header.pr-center')}</LinkButton>

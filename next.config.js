@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const path = require('path')
+const withImages = require('next-images')
 const { i18n } = require('./next-i18next.config')
 
 const nextConfig = {
@@ -15,7 +16,7 @@ const nextConfig = {
   },
 }
 
-module.exports = {
+module.exports = withImages({
   nextConfig,
   i18n,
-}
+})
