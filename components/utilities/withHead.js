@@ -18,7 +18,6 @@ const withHead = (Component, pageName) => {
           <meta property='og:image' content={`https://domain.com/saemmulter-og-image.png?${Math.random().toString(36).substr(2, 11)}`} />
           <meta property='og:type' content='website' />
           <meta property='og:site_name' content='Saemmulter' key='og:site_name' />
-          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css" />
         </Head>
         <Component {...props} />
       </>

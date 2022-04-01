@@ -1,3 +1,4 @@
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import styled from '@emotion/styled';
 import styles from '../styles/Home.module.sass';
 import { fontWeights, Rem } from '../styles/designSystem';
@@ -17,5 +18,11 @@ function Home(props) {
     </div>
   )
 }
+
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...await serverSideTranslations(locale, ['common']),
+  },
+})
 
 export default withHead(Home, 'Clean Groundwater Tech');

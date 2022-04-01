@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import { appWithTranslation } from 'next-i18next';
 import styled from '@emotion/styled';
 import { isIE } from 'react-device-detect';
 import LinkButton from '../components/utilities/linkButton';
@@ -37,4 +37,4 @@ function SaemmulterApp({ Component, pageProps }) {
   )
 }
 
-export default SaemmulterApp
+export default appWithTranslation(SaemmulterApp);
