@@ -33,9 +33,11 @@ export const colors = {
   default: '#5A433D',
   accent: '#1EBBEF',
   primary: 'rgba(rgba(90, 67, 61, 0.7)',
+  important: '#222',
+  background: '#F2F2F2',
 };
 
-export const styles = {
+export const mixin = {
   widthSettings: {
     margin: '0 auto',
     paddingRight: Rem(paddingHorizontal),

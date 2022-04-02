@@ -4,6 +4,13 @@ $total-width: $padding-horizontal * 2 + $default-width
 
 $browser-context: 16
 
+$color-black: #000
+$color-white: #FFF
+$color-default: #5A433D
+$color-accent: #1EBBEF
+$color-important: #222
+$color-primary: rgba(90, 67, 61, 0.7)
+
 @function rem($pixel, $context: $browser-context)
   @return #{$pixel/$context}rem
 
@@ -11,116 +18,138 @@ $browser-context: 16
   @return #{$pixel/$context}em
 
 =mq($mediaquery)
-  @if $mediaquery == 'maxMobile'
-    @media screen and (max-width: Rem(480))
+  @if $mediaquery == maxMobile
+    @media screen and (max-width: rem(480))
       @content
 
-  @if $mediaquery == 'maxMobile'
-    @media screen and (min-width: Rem(481))
+  @if $mediaquery == minTablet
+    @media screen and (min-width: rem(481))
       @content
 
-  @if $mediaquery == 'maxTablet'
-    @media screen and (max-width: Rem(768))
+  @if $mediaquery == maxTablet
+    @media screen and (max-width: rem(768))
       @content
 
-  @if $mediaquery == 'minXsmall'
-    @media screen and (min-width: Rem(769))
+  @if $mediaquery == minXsmall
+    @media screen and (min-width: rem(769))
       @content
 
-  @if $mediaquery == 'maxXsmall'
-    @media screen and (max-width: Rem(1024))
+  @if $mediaquery == maxXsmall
+    @media screen and (max-width: rem(1024))
       @content
 
-  @if $mediaquery == 'minSmall'
-    @media screen and (min-width: Rem(1025))
+  @if $mediaquery == minSmall
+    @media screen and (min-width: rem(1025))
       @content
 
-  @if $mediaquery == 'maxSmall'
-    @media screen and (max-width: Rem(1200))
+  @if $mediaquery == maxSmall
+    @media screen and (max-width: rem(1200))
       @content
 
-  @if $mediaquery == 'minLarge'
-    @media screen and (min-width: Rem(1201))
+  @if $mediaquery == minLarge
+    @media screen and (min-width: rem(1201))
       @content
 
-  @if $mediaquery == 'maxLarge'
-    @media screen and (max-width: Rem(1280))
+  @if $mediaquery == maxLarge
+    @media screen and (max-width: rem(1280))
       @content
 
-  @if $mediaquery == 'minXlarge'
-    @media screen and (min-width: Rem(1281))
+  @if $mediaquery == minXlarge
+    @media screen and (min-width: rem(1281))
       @content
 
 =font-weight($weight)
-  @if $weight == 'thin'
+  @if $weight == thin
     font-weight: 100
 
-  @if $weight == 'extraLight'
+  @if $weight == extraLight
     font-weight: 200
 
-  @if $weight == 'light'
+  @if $weight == light
     font-weight: 300
 
-  @if $weight == 'regular'
+  @if $weight == regular
     font-weight: 400
 
-  @if $weight == 'medium'
+  @if $weight == medium
     font-weight: 500
 
-  @if $weight == 'semiBold'
+  @if $weight == semiBold
     font-weight: 600
 
-  @if $weight == 'bold'
+  @if $weight == bold
     font-weight: 700
 
-  @if $weight == 'extraBold'
+  @if $weight == extraBold
     font-weight: 800
 
-  @if $weight == 'black'
+  @if $weight == black
     font-weight: 900
 
 =color($color)
-  @if $color == 'black'
+  @if $color == black
     color: #000
 
-  @if $color == 'white'
+  @if $color == white
     color: #FFF
 
-  @if $color == 'default'
+  @if $color == default
     color: #5A433D
 
-  @if $color == 'accent'
+  @if $color == accent
     color: #1EBBEF
 
-  @if $color == 'primary'
+  @if $color == important
+    color: #222
+
+  @if $color == primary
     color: rgba(90, 67, 61, 0.7)
 
+=background-color($color)
+  @if $color == black
+    background-color: #000
+
+  @if $color == white
+    background-color: #FFF
+
+  @if $color == default
+    background-color: #5A433D
+
+  @if $color == accent
+    background-color: #1EBBEF
+
+  @if $color == important
+    background-color: #222
+
+  @if $color == primary
+    background-color: rgba(90, 67, 61, 0.7)
+
 =style($style)
-  @if $style == 'widthSettings'
+  @if $style == widthSettings
     margin: 0 auto
     padding-right: Rem(paddingHorizontal)
     padding-left: Rem(paddingHorizontal)
     width: 100%
     max-width: Rem(totalWidth)
 
-  @if $style == 'col'
+  @if $style == col
     display: block
     flex: 1 0 0%
     width: 100%
     max-width: 100%
 
-  @if $style == 'ellipsis'
+  @if $style == ellipsis
     overflow: hidden
     text-overflow: ellipsis
     white-space: nowrap
 
-  @if $style == 'clearfix'
+  @if $style == clearfix
     &::after
       display: block
       clear: both
       content: ''
 
-  @if $style == 'screenReaderOnly'
+  @if $style == screenReaderOnly
     position: absolute
     width: 1px
     height: 1px
