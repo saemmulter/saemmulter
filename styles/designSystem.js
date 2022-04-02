@@ -51,6 +51,10 @@ export const mixin = {
     width: '100%',
     maxWidth: '100%',
   },
+  colAuto: {
+    flex: '0 0 auto',
+    width: 'auto',
+  },
   ellipsis: {
     overflow: 'hidden',
     textOverflow: 'ellipsis',

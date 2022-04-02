@@ -3,17 +3,17 @@
 .container
   h1
     display: block
-    width: 142px
-    height: 34px
+    width: rem(142)
+    height: rem(34)
 
     +mq(minTablet)
-      width: 269px
-      height: 64px
+      width: rem(269)
+      height: rem(64)
 
     a
       display: flex
       align-items: center
-      padding-left: 7px
+      padding-left: rem(7)
       width: 100%
       height: 100%
 
@@ -21,71 +21,78 @@
         +style(screenReaderOnly)
 
   nav
-    +mq(maxMobile)
+    +mq(maxSmall)
       position: absolute
       top: 0
       right: 0
       +background-color(white)
-      width: 270px
+      width: rem(270)
       height: 100%
 
-    +mq(minTablet)
+    +mq(minLarge)
       display: flex
       justify-content: space-between
       align-items: center
 
     .menu-control
-      +mq(maxMobile)
+      +mq(maxSmall)
         display: flex
         align-items: center
         justify-content: space-between
-        padding: 0 7px
-        height: 58px
+        padding: 0 rem(7)
+        height: rem(58)
 
-      +mq(minTablet)
+      +mq(minLarge)
         display: none
 
     ol
       display: flex
-      +mq(maxMobile)
+      +mq(maxSmall)
         flex-direction: column
-        padding-top: 20px
+        padding-top: rem(20)
+
+      +mq(minLarge)
+        li
+          +style(colAuto)
 
       a
         display: flex
         align-items: center
-        padding: 0 15px
-        height: 50px
+        padding: 0 rem(15)
+        height: rem(50)
         +font-weight(black)
         font-size: rem(16)
+        text-transform: uppercase
         +color(default)
 
         &:focus, &:hover
           +color(accent)
 
-        +mq(maxMobile)
+        +mq(maxSmall)
           width: 100%
 
-        +mq(minTablet)
-          padding: 0 35px
-          height: 110px
+        +mq(minLarge)
+          padding: 0 2.7344vw
+          height: rem(110)
+
+        +mq(minXlarge)
+          padding: 0 rem(35)
 
     ul
       display: flex
 
-      +mq(maxMobile)
+      +mq(maxSmall)
         justify-content: flex-end
-        margin: 0 15px
+        margin: 0 rem(15)
         border-top: 1px solid $color-important
-        padding-top: 20px
+        padding-top: rem(20)
 
       a
         display: block
-        padding: 6px
-        opacity: .7
+        padding: rem(6)
         font-size: rem(16)
         text-transform: uppercase
         +color(important)
 
-        +mq(maxMobile)
-          padding: 7px
+        +mq(maxSmall)
+          padding: rem(7)

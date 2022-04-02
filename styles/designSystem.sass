@@ -138,6 +138,10 @@ $color-primary: rgba(90, 67, 61, 0.7)
     width: 100%
     max-width: 100%
 
+  @if $style == colAuto
+    flex: 0 0 auto
+    width: auto
+
   @if $style == ellipsis
     overflow: hidden
     text-overflow: ellipsis
