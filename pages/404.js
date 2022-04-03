@@ -1,4 +1,7 @@
-function Custom404() {
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import withHead from '../components/utilities/withHead';
+
+function Custom404(props) {
   return (
     <>
       <h1>404 - Page Not Found</h1>
@@ -6,4 +9,10 @@ function Custom404() {
   )
 }
 
-export default Custom404;
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...await serverSideTranslations(locale, ['common']),
+  },
+})
+
+export default withHead(Custom404, 'Page Not Found');
