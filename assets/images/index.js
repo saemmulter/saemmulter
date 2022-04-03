@@ -1,4 +1,10 @@
 export const images = {
+  backgrounds: {
+    cover: {
+      small: require('./backgrounds/cover.small.svg'),
+      large: require('./backgrounds/cover.large.svg'),
+    },
+  },
   logos: {
     en: {
       short: {

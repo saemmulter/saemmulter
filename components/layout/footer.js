@@ -1,10 +1,10 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import styled from '@emotion/styled';
-import LinkButton from '../../utilities/linkButton';
-import { images } from '../../../assets/images';
-import { mq, mixin, colors, Rem } from '../../../styles/designSystem';
-import styles from '../../../styles/Footer.module.sass';
+import LinkButton from '../utilities/linkButton';
+import { images } from '../../assets/images';
+import { mq, mixin, colors, Rem } from '../../styles/designSystem';
+import styles from '../../styles/Footer.module.sass';
 
 const Container = styled.footer({
   backgroundColor: colors.important,

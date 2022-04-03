@@ -1,15 +1,19 @@
 import React, { useState } from "react";
 import { useTranslation } from 'react-i18next';
+import { useRouter } from 'next/router';
+import { isIE } from 'react-device-detect';
 import styled from '@emotion/styled';
-import LinkButton from '../../utilities/linkButton';
-import { images } from '../../../assets/images';
-import { mq, mixin, fontWeights, Rem } from '../../../styles/designSystem';
-import styles from '../../../styles/Header.module.sass';
+import LinkButton from '../utilities/linkButton';
+import { images } from '../../assets/images';
+import { mq, mixin, fontWeights, Rem, colors } from '../../styles/designSystem';
+import styles from '../../styles/Header.module.sass';
 
 const Container = styled.header({
   position: 'fixed',
   top: 0,
   left: 0,
+  zIndex: '9998',
+  backgroundColor: 'rgba(255, 255, 255, 0.97)',
   width: '100%',
 });
 
@@ -112,6 +116,25 @@ const LinkEnglish = styled.a(({ isEnglish }) => ({
   opacity: isEnglish ? 1 : 0.7
 }));
 
+const IE = styled.div({
+  padding: '10px',
+  backgroundColor: '#fb4637',
+  '& p': {
+    textAlign: 'center',
+    fontWeight: fontWeights.regular,
+    fontSize: Rem(16),
+    color: colors.white,
+    '& strong': {
+      fontWeight: fontWeights.black,
+    },
+    '& a': {
+      color: colors.white,
+      fontWeight: fontWeights.black,
+      textDecoration: 'underline',
+    },
+  },
+});
+
 ButtonMenuOpen.defaultProps = {
   type: 'button',
 };
@@ -143,39 +166,44 @@ function Header() {
   const menuDownloads = `/${i18n.language}/downloads`
   const menuContactUs = `/${i18n.language}/contact-us`
 
+  const router = useRouter()
+
   return (
-    <Container>
-      <Contents className={styles.container}>
-        <h1>
-          <LinkButton href={menuMain}>
-            <span>{t('header.main')}</span>
-            <Identity isKorean={isKorean} />
-          </LinkButton>
-        </h1>
-        <ButtonMenuOpen aria-label={t('header.label.menu-open')} onClick={handleNavigation} />
-        <NavigationBar navigationBar={navigationBar}>
-          <nav>
-            <div className={styles['menu-control']}>
-              <ImageSlogan aria-label='Clean Groundwater Tech' />
-              <ButtonMenuClose aria-label={t('header.label.menu-close')} onClick={handleNavigation} />
-            </div>
-            <Dummy />
-            <ol>
-              <li><LinkButton href={menuCompany}>{t('header.company')}</LinkButton></li>
-              <li><LinkButton href={menuProducts}>{t('header.products')}</LinkButton></li>
-              <li><LinkButton href={menuPrCenter}>{t('header.pr-center')}</LinkButton></li>
-              <li><LinkButton href={menuDownloads}>{t('header.downloads')}</LinkButton></li>
-              <li><LinkButton href={menuContactUs}>{t('header.contact-us')}</LinkButton></li>
-            </ol>
-            <Dummy />
-            <ul>
-              <li><LinkKorean href='/ko' locale='ko' aria-label='Choose Korean' isKorean={isKorean}>Ko</LinkKorean></li>
-              <li><LinkEnglish href='/en' locale='en' aria-label='Choose English' isEnglish={isEnglish}>En</LinkEnglish></li>
-            </ul>
-          </nav>
-        </NavigationBar>
-      </Contents>
-    </Container>
+    <>
+      <Container>
+        <Contents className={styles.container}>
+          <h1>
+            <LinkButton href={menuMain}>
+              <span>{t('header.main')}</span>
+              <Identity isKorean={isKorean} />
+            </LinkButton>
+          </h1>
+          <ButtonMenuOpen aria-label={t('header.label.menu-open')} onClick={handleNavigation} />
+          <NavigationBar navigationBar={navigationBar}>
+            <nav>
+              <div className={styles['menu-control']}>
+                <ImageSlogan aria-label='Clean Groundwater Tech' />
+                <ButtonMenuClose aria-label={t('header.label.menu-close')} onClick={handleNavigation} />
+              </div>
+              <Dummy />
+              <ol data-router={router.pathname}>
+                <li><LinkButton href={menuCompany}>{t('header.company')}</LinkButton></li>
+                <li><LinkButton href={menuProducts}>{t('header.products')}</LinkButton></li>
+                <li><LinkButton href={menuPrCenter}>{t('header.pr-center')}</LinkButton></li>
+                <li><LinkButton href={menuDownloads}>{t('header.downloads')}</LinkButton></li>
+                <li><LinkButton href={menuContactUs}>{t('header.contact-us')}</LinkButton></li>
+              </ol>
+              <Dummy />
+              <ul>
+                <li><LinkKorean href='/ko' locale='ko' aria-label='Choose Korean' isKorean={isKorean}>Ko</LinkKorean></li>
+                <li><LinkEnglish href='/en' locale='en' aria-label='Choose English' isEnglish={isEnglish}>En</LinkEnglish></li>
+              </ul>
+            </nav>
+          </NavigationBar>
+        </Contents>
+      </Container>
+      {isIE && <IE><p><strong>오래된 브라우저</strong>를 사용하고 있군요. 안전하고 편리한 인터넷을 위해 <LinkButton href="http://browsehappy.com/">브라우저를 업그레이드</LinkButton> 하세요.</p></IE>}
+    </>
   )
 }
 

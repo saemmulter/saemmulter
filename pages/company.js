@@ -1,22 +1,25 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import styled from '@emotion/styled';
-import Header from '../components/layout/header';
 import styles from '../styles/Home.module.sass';
-import { fontWeights, Rem } from '../styles/designSystem';
 import withHead from '../components/utilities/withHead';
+import Header from '../components/layout/header';
+import Cover from '../components/layout/cover';
+import { useTranslation } from 'react-i18next';
 
 const Container = styled.div()
 
 const Contents = styled.main()
 
-function Home(props) {
+function Company(props) {
+  const { i18n, t } = useTranslation('common')
+
   return (
     <>
       <Header />
       <Container className={`${styles.container} container`}>
-        <div>캐로셀 영역</div>
+        <Cover><h1>{t('header.company')}</h1></Cover>
         <Contents>
-          메인 영역
+          샘물터(company) 페이지
         </Contents>
       </Container>
     </>
@@ -29,4 +32,4 @@ export const getStaticProps = async ({ locale }) => ({
   },
 })
 
-export default withHead(Home, '깨끗한 지하수 연구기업 Clean Groundwater Tech company');
+export default withHead(Company, '샘물터 Company');
