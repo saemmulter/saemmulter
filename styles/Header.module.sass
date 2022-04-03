@@ -6,7 +6,7 @@
     width: rem(142)
     height: rem(34)
 
-    +mq(minTablet)
+    +mq(minSmall)
       width: rem(269)
       height: rem(64)
 
@@ -21,7 +21,7 @@
         +style(screenReaderOnly)
 
   nav
-    +mq(maxSmall)
+    +mq(maxTablet)
       position: absolute
       top: 0
       right: 0
@@ -29,29 +29,30 @@
       width: rem(270)
       height: 100%
 
-    +mq(minLarge)
+    +mq(minXsmall)
       display: flex
       justify-content: space-between
       align-items: center
 
     .menu-control
-      +mq(maxSmall)
+      +mq(maxXsmall)
         display: flex
         align-items: center
         justify-content: space-between
         padding: 0 rem(7)
         height: rem(58)
 
-      +mq(minLarge)
+      +mq(minXsmall)
         display: none
 
     ol
       display: flex
-      +mq(maxSmall)
+
+      +mq(maxTablet)
         flex-direction: column
         padding-top: rem(20)
 
-      +mq(minLarge)
+      +mq(minXsmall)
         li
           +style(colAuto)
 
@@ -68,12 +69,20 @@
         &:focus, &:hover
           +color(accent)
 
-        +mq(maxSmall)
+        +mq(maxTablet)
           width: 100%
+
+        +mq(minXsmall)
+          padding: 0 1.292vw
+          height: rem(110)
+          font-size: rem(14)
+
+        +mq(minSmall)
+          padding: 0 1.462vw
+          font-size: rem(16)
 
         +mq(minLarge)
           padding: 0 2.7344vw
-          height: rem(110)
 
         +mq(minXlarge)
           padding: 0 rem(35)
@@ -81,7 +90,7 @@
     ul
       display: flex
 
-      +mq(maxSmall)
+      +mq(maxTablet)
         justify-content: flex-end
         margin: 0 rem(15)
         border-top: 1px solid $color-important
@@ -94,5 +103,11 @@
         text-transform: uppercase
         +color(important)
 
-        +mq(maxSmall)
+        +mq(maxTablet)
           padding: rem(7)
+
+        +mq(minXsmall)
+          font-size: rem(14)
+
+        +mq(minSmall)
+          font-size: rem(16)

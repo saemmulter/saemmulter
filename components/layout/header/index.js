@@ -19,10 +19,10 @@ const Contents = styled.div({
   padding: `0 ${Rem(8)}`,
   width: '100%',
   height: Rem(58),
-  [mq.maxSmall]: {
+  [mq.maxTablet]: {
     justifyContent: 'space-between',
   },
-  [mq.minLarge]: {
+  [mq.minXsmall]: {
     height: Rem(110),
   },
 });
@@ -35,7 +35,7 @@ const Identity = styled.i(({ isKorean }) => ({
   backgroundImage: isKorean ? `url(${images.logos.ko.short.saemmulter})` : `url(${images.logos.en.short.saemmulter})`,
   width: Rem(127.27),
   height: Rem(25),
-  [mq.minLarge]: {
+  [mq.minSmall]: {
     backgroundImage: isKorean ? `url(${images.logos.ko.long.saemmulter})` : `url(${images.logos.en.long.saemmulter})`,
     width: Rem(254.51),
     height: Rem(50),
@@ -44,14 +44,14 @@ const Identity = styled.i(({ isKorean }) => ({
 
 const ButtonMenuOpen = styled.button({
   display: 'flex',
-  [mq.minLarge]: {
-    display: 'none',
-  },
   alignItems: 'center',
   justifyContent: 'center',
   backgroundColor: 'transparent',
   width: Rem(34),
   height: Rem(34),
+  [mq.minXsmall]: {
+    display: 'none',
+  },
   '&::before': {
     content: '""',
     display: 'block',
@@ -62,7 +62,7 @@ const ButtonMenuOpen = styled.button({
 });
 
 const NavigationBar = styled.div(({ navigationBar }) => ({
-  [mq.maxSmall]: {
+  [mq.maxTablet]: {
     position: 'fixed',
     top: 0,
     display: navigationBar ? 'block' : 'none',
@@ -71,7 +71,7 @@ const NavigationBar = styled.div(({ navigationBar }) => ({
     height: '100%',
     backgroundColor: 'rgba(34, 34, 34, .5)',
   },
-  [mq.minLarge]: {
+  [mq.minXsmall]: {
     ...mixin.col,
   },
 }));
@@ -99,7 +99,7 @@ const ButtonMenuClose = styled.button({
 });
 
 const Dummy = styled.div({
-  width: '1px',
+  ...mixin.colAuto,
 });
 
 const LinkKorean = styled.a(({ isKorean }) => ({
@@ -124,7 +124,6 @@ function Header() {
   const { i18n, t } = useTranslation('common')
 
   const [navigationBar, setNavigationBar] = useState(false);
-
   const handleNavigation = () => {
     setNavigationBar(!navigationBar);
   };
@@ -136,6 +135,7 @@ function Header() {
     var isKorean = false
     var isEnglish = true
   }
+
   const menuMain = `/${i18n.language}`
   const menuCompany = `/${i18n.language}/company`
   const menuProducts = `/${i18n.language}/products`
