@@ -1,23 +1,42 @@
 import Head from 'next/head';
+import { useTranslation } from 'react-i18next';
 
 const withHead = (Component, pageName) => {
   const App = props => {
+    const { i18n } = useTranslation('common')
+
+    if (i18n.language === 'ko') {
+      var hrefLang = 'ko-KR'
+      var local = 'ko_KR'
+      var title = '주식회사 샘물터'
+      var description = '깨끗한 지하수 연구기업'
+      var siteName = '샘물터'
+    } else {
+      var hrefLang = 'en-US'
+      var local = 'en_US'
+      var title = 'Saemmulter Inc.'
+      var description = 'Clean Groundwater Tech company'
+      var siteName = 'Saemmulter'
+    }
+
+    const domain = `https://domain.com/`
+
     return (
       <>
         <Head>
-          <link rel='alternate' hrefLang='ko-KR' href='https://domain.com/' />
-          <link rel='canonical' href='https://domain.com/' key='canonical' />
+          <link rel='alternate' hrefLang={hrefLang} href={domain} />
+          <link rel='canonical' href={domain} />
           <meta name='format-detection' content='telephone=no' />
           <meta name='viewport' content='width=device-width, initial-scale=1, viewport-fit=cover' />
-          <title key='title'>Saemmulter Inc. : {pageName}</title>
-          <meta name='description' content='With information on the water in the ground, safety, provides information on sustainable water resources' key='description' />
-          <meta property='og:title' content={`Saemmulter Inc. : ${pageName}`} />
-          <meta property='og:description' content='With information on the water in the ground, safety, provides information on sustainable water resources' />
-          <meta property='og:url' content='https://domain.com/' key='og:url' />
-          <meta property='og:locale' content='en_US' />
-          <meta property='og:image' content={`https://domain.com/saemmulter-og-image.png?${Math.random().toString(36).substr(2, 11)}`} />
+          <title>{title} : {pageName}</title>
+          <meta name='description' content={description} />
+          <meta property='og:title' content={`${title} : ${pageName}`} />
+          <meta property='og:description' content={description} />
+          <meta property='og:url' content={domain} />
+          <meta property='og:locale' content={local} />
+          <meta property='og:image' content={`${domain}saemmulter-og-image.png?${(Math.random() * 7).toString(7)}`} />
           <meta property='og:type' content='website' />
-          <meta property='og:site_name' content='Saemmulter' key='og:site_name' />
+          <meta property='og:site_name' content={siteName} />
         </Head>
         <Component {...props} />
       </>

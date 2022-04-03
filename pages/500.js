@@ -15,4 +15,4 @@ export const getStaticProps = async ({ locale }) => ({
   },
 })
 
-export default withHead(Custom500, 'Page Not Found');
+export default withHead(Custom500, 'Server-side error occurred');
