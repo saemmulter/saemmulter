@@ -10,5 +10,19 @@
       "menu-open": "Open navigation",
       "menu-close": "Close navigation"
     }
+  },
+  "footer": {
+    "company": "Saemmulter Inc.",
+    "address": {
+      "term": "Address",
+      "description": "1, Business incubation center, Start-up hub, K-water Bldg, 200, Sintanjin-ro, Daedeok-gu, Daejeon, 34350, Rep. of KOREA"
+    },
+    "social": {
+      "facebook": "Facebook official page",
+      "instagram": "Instagram official page",
+      "youtube": "YouTube official channel",
+      "naver-blog": "Naver Blog official blog",
+      "alibaba": "Alibaba official Supply"
+    }
   }
 }

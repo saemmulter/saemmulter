@@ -1,0 +1,58 @@
+@import './designSystem.sass'
+
+.container
+  .laws
+    strong
+      display: block
+      padding-bottom: 10px
+      +font-weight(bold)
+      font-size: rem(18)
+      line-height: 1.22222222
+      +color(white)
+
+    dl
+      dt
+        display: block
+        clear: both
+        content: ''
+
+        &::after
+          content: ':'
+          padding-right: 2px
+
+        &:nth-of-type(1)
+          +style(screenReaderOnly)
+
+      dt, dd
+        float: left
+        padding: 5px 0
+        +font-weight(regular)
+        font-size: rem(14)
+        line-height: 1.42857143
+        color: rgba($color-white, .7)
+
+      a
+        color: rgba($color-white, .7)
+
+        &:focus, &:hover
+          text-decoration: underline
+
+  ul
+    display: flex
+    justify-content: flex-end
+
+    +mq(maxXsmall)
+      padding-top: 15px
+
+    a
+      display: block
+      width: 38px
+      height: 38px
+
+      i
+        display: block
+        background-repeat: no-repeat
+        background-position: 50% 50%
+        background-size: contain
+        width: 100%
+        height: 100%

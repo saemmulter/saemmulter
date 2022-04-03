@@ -10,5 +10,19 @@
       "menu-open": "메뉴 열기",
       "menu-close": "메뉴 닫기"
     }
+  },
+  "footer": {
+    "company": "주식회사 샘물터",
+    "address": {
+      "term": "주소",
+      "description": "대전 대덕구 신탄진로 200 (연축동) 한국수자원공사 K-water 스타트업 허브 창업보육실 1호"
+    },
+    "social": {
+      "facebook": "Facebook 공식 페이지",
+      "instagram": "Instagram 공식 페이지",
+      "youtube": "YouTube 공식 채널",
+      "naver-blog": "Naver Blog 공식 블로그",
+      "alibaba": "Alibaba 공식 서플라이"
+    }
   }
 }
