@@ -1,5 +1,4 @@
 /** @type {import('next').NextConfig} */
-const path = require('path')
 const withImages = require('next-images')
 const { i18n } = require('./next-i18next.config')
 
@@ -13,6 +12,9 @@ const nextConfig = {
       ...config.module, exprContextCritical: false,
     }
     return config
+  },
+  images: {
+    disableStaticImages: true,
   },
 }
 

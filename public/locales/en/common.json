@@ -24,5 +24,21 @@
       "naver-blog": "Naver Blog official blog",
       "alibaba": "Alibaba official Supply"
     }
+  },
+  "home": {
+    "subject1": "Company",
+    "subject2": "Products",
+    "subject3": "About Us",
+    "subject4": "PR Center",
+    "description1-1": "With information on the water in the ground,",
+    "description1-2": "safety, provides information on sustainable water resources",
+    "description2-1": "Automatic Underground",
+    "description2-2": "water level measuring device",
+    "description3": "",
+    "description4-a": "Seoul selects target companies for ‘New Technology in the Water Industry Contest’",
+    "description4-p1": "The Seoul Metropolitan Government announced on the 13th that four sprout companies were finally selected at the ‘2nd Seoul Water Industry Sprout Company Contest’ held in June.",
+    "description4-p2": "Therefore, attention is being paid to the activities of various new technologies in the water industry, such as technology that collects and utilizes rainwater, automatic groundwater level measurement equipment, and sterilizers using ultraviolet LEDs.",
+    "description4-p3": "The top prizes were the Clean Groundwater Research Institute, which developed automatic groundwater level measuring equipment based on laser sensors, and WithInnet Co., Ltd., which introduced sterilizers using ultraviolet LEDs through self-generation.",
+    "more-link": "See more"
   }
 }

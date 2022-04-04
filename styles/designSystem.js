@@ -78,6 +78,11 @@ export const mixin = {
     clipPath: 'inset(50%)',
     border: 0,
   },
+  imageRendering: {
+    imageRendering: '-webkit-optimize-contrast',
+    transform: 'translateZ(0)',
+    backfaceVisibility: 'hidden',
+  },
 };
 
 export const Clamp = (clamp, height, lineheight) => (`
