@@ -140,7 +140,19 @@ const ImageCarouselPress = styled.img({
 
 function Carousel() {
   const settings = {
-    dots: true
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    pauseOnHover: true,
+    draggable: false,
+    responsive: [
+      {
+        breakpoint: 769,
+        settings: {
+          draggable: true,
+        },
+      },
+    ],
   };
 
   const { t } = useTranslation('common')

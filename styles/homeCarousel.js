@@ -19,8 +19,10 @@ export const HomeCarousel = styled.div({
     },
   },
   '& .slick-slider': {
-    userSelect: 'none',
-    touchAction: 'pan-y',
+    [mq.maxTablet]: {
+      userSelect: 'none',
+      touchAction: 'pan-y',
+    },
     '& .slick-list, & .slick-track': {
       transform: 'translate3d(0,0,0)',
     },
