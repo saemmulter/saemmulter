@@ -11,6 +11,7 @@ import SubjectCenter from '../components/pages/home/subjectCenter';
 import Description from '../components/pages/home/description';
 import MoreLink from '../components/pages/home/moreLink';
 import SubjectLeft from '../components/pages/home/subjectLeft';
+import Carousel from '../components/pages/home/carousel';
 
 const Container = styled.div({
   width: '100%',
@@ -47,7 +48,7 @@ function Home(props) {
     <>
       <Header />
       <Container className={`${styles.container} container`}>
-        <div>캐로셀 영역</div>
+        <Carousel />
         <Contents className={styles.contents}>
           <section>
             <SubjectCenter subjectCenter={t('home.subject1')} />

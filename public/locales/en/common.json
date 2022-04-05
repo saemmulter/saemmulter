@@ -40,5 +40,17 @@
     "description4-p2": "Therefore, attention is being paid to the activities of various new technologies in the water industry, such as technology that collects and utilizes rainwater, automatic groundwater level measurement equipment, and sterilizers using ultraviolet LEDs.",
     "description4-p3": "The top prizes were the Clean Groundwater Research Institute, which developed automatic groundwater level measuring equipment based on laser sensors, and WithInnet Co., Ltd., which introduced sterilizers using ultraviolet LEDs through self-generation.",
     "more-link": "See more"
+  },
+  "carousel": {
+    "subject1": "Saemmulter Inc.",
+    "subject2-1": "Automatic",
+    "subject2-2": "Underground water",
+    "subject2-3": "level measuring device",
+    "subject3-1": "Saemmulter,",
+    "subject3-2": "participated in",
+    "subject3-3": "“We Challenge”",
+    "description1": "Clean Groundwater Tech company",
+    "description2": "Automatic groundwater level measuring device using IoT and Lidar measurement method",
+    "description3": "Items such as IoT groundwater level observation system and water purification system are announced"
   }
 }

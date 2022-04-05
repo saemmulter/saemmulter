@@ -34,5 +34,7 @@ export const images = {
   icons: {
     menuOpen: require('./icons/menu-open.svg'),
     menuClose: require('./icons/menu-close.svg'),
+    carouselPrevious: require('./icons/carousel-previous.svg'),
+    carouselNext: require('./icons/carousel-next.svg'),
   },
 }
