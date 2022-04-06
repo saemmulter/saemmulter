@@ -6,9 +6,8 @@ import Header from '../components/layout/header';
 import Cover from '../components/layout/cover';
 import { useTranslation } from 'react-i18next';
 
-const Container = styled.div()
-
-const Contents = styled.main()
+const Container = styled.div();
+const Contents = styled.main();
 
 function Company(props) {
   const { i18n, t } = useTranslation('common')
@@ -17,7 +16,7 @@ function Company(props) {
     <>
       <Header />
       <Container className={`${styles.container} container`}>
-        <Cover><h1>{t('header.company')}</h1></Cover>
+        <Cover subject={t('header.company')} />
         <Contents>
           샘물터(company) 페이지
         </Contents>

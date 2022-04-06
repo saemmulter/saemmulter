@@ -3,7 +3,9 @@ import styled from '@emotion/styled';
 import { mq, fontWeights, Rem, colors } from '../../styles/designSystem';
 import { images } from '../../assets/images';
 
-const Cover = styled.div({
+const Container = styled.div();
+
+const Contents = styled.div({
   [mq.maxTablet]: {
     background: `url(${images.backgrounds.cover.small}) no-repeat 50% 50%/contain`,
     position: 'relative',
@@ -32,5 +34,15 @@ const Cover = styled.div({
     },
   },
 });
+
+function Cover({ subject }) {
+  return (
+    <Container>
+      <Contents>
+        <h1>{subject}</h1>
+      </Contents>
+    </Container>
+  )
+}
 
 export default Cover;
