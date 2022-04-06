@@ -195,8 +195,8 @@ function Header() {
               </ol>
               <Dummy />
               <ul>
-                <li><LinkKorean href='/ko' locale='ko' aria-label='Choose Korean' isKorean={isKorean}>Ko</LinkKorean></li>
-                <li><LinkEnglish href='/en' locale='en' aria-label='Choose English' isEnglish={isEnglish}>En</LinkEnglish></li>
+                <li><LinkKorean href={`/ko${router.pathname}`} locale='ko' aria-label='Choose Korean' isKorean={isKorean}>Ko</LinkKorean></li>
+                <li><LinkEnglish href={`/en${router.pathname}`} locale='en' aria-label='Choose English' isEnglish={isEnglish}>En</LinkEnglish></li>
               </ul>
             </nav>
           </NavigationBar>
