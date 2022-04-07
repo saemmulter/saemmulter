@@ -8,7 +8,7 @@ import withHead from '../components/utilities/withHead';
 import LinkButton from '../components/utilities/linkButton';
 import YouTubePlayer from '../components/utilities/youTubePlayer';
 import SubjectCenter from '../components/pages/home/subjectCenter';
-import Description from '../components/pages/home/description';
+import HomeDescription from '../components/pages/home/description';
 import MoreLink from '../components/pages/home/moreLink';
 import SubjectLeft from '../components/pages/home/subjectLeft';
 import Carousel from '../components/pages/home/carousel';
@@ -52,7 +52,7 @@ function Home(props) {
         <Contents className={styles.contents}>
           <section>
             <SubjectCenter subjectCenter={t('home.subject1')} />
-            <Description
+            <HomeDescription
               descriptionPrimary={t('home.description1-1')}
               descriptionSecondary={t('home.description1-2')}
             />
@@ -61,7 +61,7 @@ function Home(props) {
           <section>
             <SubjectCenter subjectCenter={t('home.subject2')} />
             <ImageItem><ImageProduct /></ImageItem>
-            <Description
+            <HomeDescription
               descriptionPrimary={t('home.description2-1')}
               descriptionSecondary={t('home.description2-2')}
             />

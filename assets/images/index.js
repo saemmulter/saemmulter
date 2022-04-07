@@ -36,5 +36,9 @@ export const images = {
     menuClose: require('./icons/menu-close.svg'),
     carouselPrevious: require('./icons/carousel-previous.svg'),
     carouselNext: require('./icons/carousel-next.svg'),
+    company: {
+      smile: require('./icons/company.smile.svg'),
+      growth: require('./icons/company.growth.svg'),
+    },
   },
 }

@@ -1,0 +1,84 @@
+@import './designSystem.sass'
+
+.container
+  .values
+    padding-top: rem(30)
+
+    +mq(minSmall)
+      padding-top: rem(20)
+
+    .item
+      +mq(maxXsmall)
+        padding: 10px 0
+
+        &:first-of-type
+          padding-top: 0
+
+        &:last-of-type
+          padding-bottom: 0
+
+      .context
+        +style(col)
+
+        +mq(maxXsmall)
+          padding-left: rem(10)
+
+        +mq(minSmall)
+          display: flex
+          flex-direction: column
+          justify-content: center
+          padding-right: rem(80)
+
+        +mq(minLarge)
+          padding-right: rem(160)
+
+        h3
+          +font-weight(bold)
+          font-size: rem(16)
+          line-height: 1.25
+          +color(accent)
+
+          +mq(minTablet)
+            span
+              display: block
+
+          +mq(minSmall)
+            font-size: rem(22)
+            line-height: 1.36363636
+
+        p
+          padding-top: rem(10)
+          +font-weight(regular)
+          font-size: rem(14)
+          line-height: 1.14285714
+
+          +mq(minSmall)
+            padding-top: rem(20)
+            font-size: rem(18)
+            line-height: 1.44444444
+
+  .partners-list
+    display: flex
+    flex-wrap: wrap
+
+    li
+      width: 33.33%
+
+      +mq(minTablet)
+        width: 25%
+
+      +mq(minXsmall)
+        width: 33.33%
+
+      +mq(minSmall)
+        width: 25%
+
+      +mq(minLarge)
+        width: 20%
+
+      +mq(minXlarge)
+        width: 12.5%
+
+      i
+        padding-top: 100%
+        height: 0

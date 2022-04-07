@@ -52,5 +52,67 @@
     "description1": "Clean Groundwater Tech company",
     "description2": "Automatic groundwater level measuring device using IoT and Lidar measurement method",
     "description3": "Items such as IoT groundwater level observation system and water purification system are announced"
+  },
+  "company": {
+    "subject1": "Saemmulter",
+    "subject2": "Info.",
+    "subject3": "History",
+    "subject4": "Values & Vision",
+    "subject5": "Adbisory board & Partners",
+    "description1": "With information on the water in the ground safety, provides information on sustainable water resources.",
+    "description4": "We provides information on underground safety and sustainable water resources."
+  },
+  "saemmulter": {
+    "paragraph1": "For monitoring the groundwater, we need to have a measuring sensor, which can be easily installed, and which indicates the flow of groundwater on a map. We are currently creating such a solution and related services.",
+    "paragraph2": "We understanding the flow of natural water and the nature-friendly use of water will contribute to reducing the cost for supply of water.",
+    "paragraph3": "We also receive assistance from groundwater specialists and business consultants in Korea as well as from foreign students studying in Korea and Korea Water Resources Development Corporation. Diverse information on technological verification and management and the world’s water-related problems is obtained and shared among the various specialists."
+  },
+  "info": {
+    "term1": "Year of Establishment",
+    "term2": "Corporate Conversion",
+    "term3": "Field of Business",
+    "term4": "Location",
+    "description1": "Clean Groundwater Lab",
+    "description2": "Saemmulter Inc.",
+    "description3": "Science, Technology and Engineering",
+    "description4": "Daedeok-gu, Daejeon, Rep. of KOREA"
+  },
+  "timeline": {
+    "y2019i01": "K-water ‘Data Voucher Support Project’ agreement",
+    "y2019i02": "The establishment of ‘Clean Groundwater Lab’",
+    "y2019i03": "DICIA ‘National Human Resource Development Consortium’ agreement",
+    "y2020i01": "K-water ‘Startup Hub’ Tenancy contract",
+    "y2020i02": "Convention on the Promotion of Industry with Wide Area Cooperation Rights",
+    "y2020i03": "‘Seoul City Water Industry Contest’ Grand Prize",
+    "y2020i04": "‘Sejong City Contest’ Excellence Award",
+    "y2020i05": "Malaysia Environmental Fair (Virtual IGEM 2020)",
+    "y2020i06": "ISO14001",
+    "y2020i07": "Economy of Francesco in Korea",
+    "y2020i08": "Social entrepreneur selection",
+    "y2020i09": "Corporate conversion",
+    "y2021i01": "Saemmulter Inc. Patent",
+    "y2021i02": "Selection of projects to foster social cooperative enterprises",
+    "y2021i03": "EoC (Economy of Communion) Agreement",
+    "y2021i04": "Excellent weather management",
+    "y2021i05": "‘Social Venture Test Bed Support Business’ agreement"
+  },
+  "values": {
+    "term1-1": "Continuous technology development and",
+    "term1-2": "customer satisfaction.",
+    "term2-1": "Continuous growth and",
+    "term2-2": "challenge.",
+    "description1": "We will realize high customer satisfaction by strengthening technological competitiveness and providing more accurate water resource information with safe and high-quality products and systems.",
+    "description2": "We will strengthen our competitiveness through continuous growth and challenges by changing rapidly according to rapidly changing market."
+  },
+  "partners": {
+    "org1": "Ammon TEck",
+    "org2": "bakertilly",
+    "org3": "Economy of Communion",
+    "org4": "iLAB COLLECTIVE",
+    "org5": "GGul B.",
+    "org6": "saeOn",
+    "org7": "K water",
+    "org8": "inno plus",
+    "org9": "KMT"
   }
 }

@@ -64,11 +64,19 @@ address
 
 body
   +background-color(important)
-  padding-top: 58px
+  padding-top: rem(58)
 
   +mq(minXsmall)
-    padding-top: 110px
+    padding-top: rem(110)
 
 .container
   +background-color(white)
   width: 100%
+
+.contents
+  padding-top: rem(50)
+  padding-bottom: rem(100)
+
+  +mq(minXsmall)
+    padding-top: rem(100)
+    padding-bottom: rem(150)

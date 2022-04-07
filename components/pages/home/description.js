@@ -17,7 +17,7 @@ const Container = styled.p({
   },
 });
 
-function Description({ descriptionPrimary, descriptionSecondary }) {
+function HomeDescription({ descriptionPrimary, descriptionSecondary }) {
   return (
     <Container>
       {descriptionPrimary}
@@ -26,4 +26,4 @@ function Description({ descriptionPrimary, descriptionSecondary }) {
   )
 }
 
-export default Description;
+export default HomeDescription;
