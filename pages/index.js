@@ -28,7 +28,7 @@ const ImageItem = styled.div({
 });
 
 const ImageProduct = styled.i({
-  background: `url(/home.product.png?${(Math.random() * 7).toString(7)}) no-repeat 50% 50%/contain`,
+  background: `url(${process.env.BACKEND_URL}/home.product.png?${(Math.random() * 7).toString(7)}) no-repeat 50% 50%/contain`,
   display: 'block',
   paddingTop: '30%',
   height: 0,
