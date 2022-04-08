@@ -114,5 +114,30 @@
     "org7": "K water",
     "org8": "inno plus",
     "org9": "KMT"
+  },
+  "pr-center": {
+    "subject1": "Press",
+    "subject2": "Certificate"
+  },
+  "press": {
+    "subject1": "Grand prize at the ‘Water Industry New Technology Contest’",
+    "subject2": "Develop a groundwater level monitoring solution",
+    "subject3": "Business for regional cooperation industry promotion ‘WE Change’",
+    "subject4": "‘Regional Cooperation Industry Development Project’ report",
+    "description1": "The Seoul Metropolitan Government said four start-ups were selected in the ‘2nd Seoul Water Industry Sprout Enterprise Contest’ held in June. Various new technologies are expected to be active in the water industry, including technology that collects and utilizes rainwater, automatic groundwater level measurement equipment, and sterilizers using ultraviolet LEDs.",
+    "description2": "Most entrepreneurs all have dreams. They are dreaming of their own goals, but not everyone can succeed. The social atmosphere for startups has improved compared to the past, but only a few startups are expected.",
+    "description3": "Daejeon Creative Economy Innovation Center (Director Kim Jung-soo) will hold the ‘We Challenge,’ a briefing session on attracting investment in projects to foster wide-area cooperation projects in 2020, at the Yuseong International City Hotel on the 16th. This event is part of the project to foster the wide-area cooperation industry in Daejeon-Gangwon, and is designed to strengthen the competitiveness of companies in the energy and water grid integrated device and system industries.",
+    "description4": "A performance report meeting was held online non-face-to-face to share the results of non-R&D tasks for companies based on energy and water grid industries in the ‘2020 Wide Area Cooperation Industry Promotion Project’ organized by the Daejeon Center for Creative Economy & Innovation (Center Director Kim Jung-soo).",
+    "journal1": "E Media",
+    "journal2": "HelloDD",
+    "journal3": "etnews",
+    "journal4": "City Journal"
+  },
+  "certificate": {
+    "y2021i01": "Patent for ‘groundwater monitoring system using IoT-based LiDAR sensor technology’",
+    "y2021i02": "Selected as ‘Best Weather Management Company’",
+    "y2020i01": "Won the grand prize at the ‘2nd Seoul Water Industry Sprout Enterprise Contest’",
+    "y2020i02": "Convention on the Promotion of Industry with Wide Area Cooperation Rights",
+    "y2020i03": "‘2020 Sejong Special Self-Governing Public Data Utilization Startup Contest’ Idea Planning Division Excellence Award"
   }
 }

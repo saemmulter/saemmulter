@@ -2,7 +2,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'react-i18next';
 import styled from '@emotion/styled';
 import styles from '../styles/Company.module.sass';
-import { mq, mixin, fontWeights, Rem, colors } from '../styles/designSystem';
+import { mq, mixin, Rem } from '../styles/designSystem';
 import withHead from '../components/utilities/withHead';
 import Header from '../components/layout/header';
 import Cover from '../components/layout/cover';
@@ -50,7 +50,7 @@ const Description = styled.div({
 const Paragraphes = styled.div();
 
 function Company(props) {
-  const { i18n, t } = useTranslation('common')
+  const { t } = useTranslation('common')
 
   return (
     <>

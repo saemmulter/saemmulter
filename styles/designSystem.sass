@@ -164,11 +164,11 @@ $color-primary: rgba(90, 67, 61, 0.7)
     clip-path: inset(50%)
     border: 0
 
-=clamp($clamp, $maxheight, $lineheight)
+=clamp($line, $maxheight, $lineheight)
   overflow: hidden
   text-overflow: ellipsis
   display: -webkit-box
   -webkit-box-orient: vertical
   -webkit-line-clamp: $line
-  max-height: $height / 16rem
+  max-height: rem($maxheight)
   line-height: $lineheight

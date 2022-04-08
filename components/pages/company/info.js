@@ -9,8 +9,8 @@ const DefinitionList = styled.dl({
     paddingTop: Rem(7),
     paddingBottom: Rem(7),
     [mq.minSmall]: {
-      paddingTop: Rem(3),
-      paddingBottom: Rem(3),
+      paddingTop: Rem(5),
+      paddingBottom: Rem(5),
     },
   },
 });

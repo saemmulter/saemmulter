@@ -1,0 +1,103 @@
+@import './designSystem.sass'
+
+.press
+  &-item
+    display: flex
+    flex-direction: column
+    margin: rem(25) 0
+
+    +mq(maxTablet)
+      width: 100%
+
+      &:first-of-type
+        margin-top: 0
+
+      &:last-of-type
+        margin-bottom: 0
+
+    +mq(minXsmall)
+      margin-top: rem(10)
+      margin-bottom: rem(10)
+      padding: 0 rem(10)
+      width: 50%
+
+    +mq(maxSmall)
+      &:nth-of-type(1), &:nth-of-type(2)
+        margin-top: 0
+
+      &:nth-of-type(3), &:nth-of-type(4)
+        margin-bottom: 0
+
+    +mq(minLarge)
+      width: 25%
+
+    +mq(minXlarge)
+      padding-right: rem(25)
+      padding-left: rem(25)
+
+    &:focus, &:hover
+      strong
+        text-decoration: underline
+
+  &-thumbnail
+    position: relative
+    margin-bottom: rem(20)
+    padding-top: 70.37037037%
+    height: 0
+
+  &-summary
+    display: flex
+    flex-direction: column
+    margin: rem(20) rem(15) 0
+
+    +mq(minXsmall)
+      margin: 0
+
+    strong
+      +font-weight(bold)
+      font-size: rem(18)
+      text-transform: uppercase
+      line-height: 1.11111111
+      letter-spacing: -.01em
+      +color(important)
+
+      +mq(minXsmall)
+        height: rem(55)
+        font-size: rem(16)
+
+      +mq(minXlarge)
+        height: rem(60)
+        font-size: rem(18)
+
+    p
+      margin-top: rem(10)
+      +clamp(3, 60, 1.25)
+      +font-weight(regular)
+      font-size: rem(16)
+      +color(default)
+
+      +mq(minXsmall)
+        height: rem(60)
+
+  &-source
+    margin-top: rem(5)
+
+    time, cite
+      font-size: rem(14)
+      line-height: 1.14285714
+      +color(primary)
+
+    time::after
+      content: '·'
+      padding: 0 rem(5)
+      +font-weight(black)
+
+.container
+  .caution
+    padding-bottom: rem(15)
+    +font-weight(bold)
+    font-size: rem(16)
+    +color(accent)
+
+    +mq(maxTablet)
+      margin: 0 rem(15)
