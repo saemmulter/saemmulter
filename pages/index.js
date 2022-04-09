@@ -1,3 +1,4 @@
+import { env } from 'process'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'react-i18next';
 import styled from '@emotion/styled';
@@ -12,6 +13,8 @@ import HomeDescription from '../components/pages/home/description';
 import MoreLink from '../components/pages/home/moreLink';
 import SubjectLeft from '../components/pages/home/subjectLeft';
 import Carousel from '../components/pages/home/carousel';
+
+const ImageProductSource = `/home.product.png?${(Math.random() * 7).toString(7)}`
 
 const Container = styled.div({
   width: '100%',
@@ -28,7 +31,7 @@ const ImageItem = styled.div({
 });
 
 const ImageProduct = styled.i({
-  background: `url(${process.env.BACKEND_URL}/home.product.png?${(Math.random() * 7).toString(7)}) no-repeat 50% 50%/contain`,
+  background: `url(${ImageProductSource}) no-repeat 50% 50%/contain`,
   display: 'block',
   paddingTop: '30%',
   height: 0,
