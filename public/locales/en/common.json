@@ -38,7 +38,7 @@
     "description4-a": "Seoul selects target companies for ‘New Technology in the Water Industry Contest’",
     "description4-p1": "The Seoul Metropolitan Government announced on the 13th that four sprout companies were finally selected at the ‘2nd Seoul Water Industry Sprout Company Contest’ held in June.",
     "description4-p2": "Therefore, attention is being paid to the activities of various new technologies in the water industry, such as technology that collects and utilizes rainwater, automatic groundwater level measurement equipment, and sterilizers using ultraviolet LEDs.",
-    "description4-p3": "The top prizes were the Clean Groundwater Research Institute, which developed automatic groundwater level measuring equipment based on laser sensors, and WithInnet Co., Ltd., which introduced sterilizers using ultraviolet LEDs through self-generation.",
+    "description4-p3": "The top prizes were the Clean Groundwater Lab, which developed automatic groundwater level measuring equipment based on LiDAR sensors, and WithInnet Co., Ltd., which introduced sterilizers using ultraviolet LEDs through self-generation.",
     "more-link": "See more"
   },
   "carousel": {
@@ -122,7 +122,7 @@
   "press": {
     "subject1": "Grand prize at the ‘Water Industry New Technology Contest’",
     "subject2": "Develop a groundwater level monitoring solution",
-    "subject3": "Business for regional cooperation industry promotion ‘WE Change’",
+    "subject3": "Business for regional cooperation industry promotion ‘We Change’",
     "subject4": "‘Regional Cooperation Industry Development Project’ report",
     "description1": "The Seoul Metropolitan Government said four start-ups were selected in the ‘2nd Seoul Water Industry Sprout Enterprise Contest’ held in June. Various new technologies are expected to be active in the water industry, including technology that collects and utilizes rainwater, automatic groundwater level measurement equipment, and sterilizers using ultraviolet LEDs.",
     "description2": "Most entrepreneurs all have dreams. They are dreaming of their own goals, but not everyone can succeed. The social atmosphere for startups has improved compared to the past, but only a few startups are expected.",
@@ -134,7 +134,7 @@
     "journal4": "City Journal"
   },
   "certificate": {
-    "y2021i01": "Patent for ‘groundwater monitoring system using IoT-based LiDAR sensor technology’",
+    "y2021i01": "Patent for ‘Groundwater Monitoring System using IoT-based LiDAR Sensor Technology’",
     "y2021i02": "Selected as ‘Best Weather Management Company’",
     "y2020i01": "Won the grand prize at the ‘2nd Seoul Water Industry Sprout Enterprise Contest’",
     "y2020i02": "Convention on the Promotion of Industry with Wide Area Cooperation Rights",
