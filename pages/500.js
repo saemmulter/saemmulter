@@ -26,4 +26,4 @@ export const getStaticProps = async ({ locale }) => ({
   },
 })
 
-export default withHead(Custom500, 'Server-side error occurred');
+export default withHead(Custom500, 'Server-side error occurred', '505');

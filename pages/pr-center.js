@@ -94,4 +94,4 @@ export const getStaticProps = async ({ locale }) => ({
   },
 })
 
-export default withHead(Company, '보도자료 PR Center');
+export default withHead(Company, '보도자료 PR Center', 'pr-center');

@@ -26,4 +26,4 @@ export const getStaticProps = async ({ locale }) => ({
   },
 })
 
-export default withHead(Custom404, 'Page Not Found');
+export default withHead(Custom404, 'Page Not Found', '404');

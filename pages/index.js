@@ -1,4 +1,3 @@
-import { env } from 'process'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'react-i18next';
 import styled from '@emotion/styled';
@@ -104,4 +103,4 @@ export const getStaticProps = async ({ locale }) => ({
   },
 })
 
-export default withHead(Home, '깨끗한 지하수 연구기업 Clean Groundwater Tech company');
+export default withHead(Home, '깨끗한 지하수 연구기업 Clean Groundwater Tech company', '');
