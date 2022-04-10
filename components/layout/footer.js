@@ -58,7 +58,7 @@ function Footer() {
             <dt>Mail</dt>
             <dd><a href="mailto:cgwateric@gmail.com">cgwateric@gmail.com</a></dd>
             <dt>Tel</dt>
-            <dd>+82-10-7413-1102</dd>
+            <dd><a href="tel:+82-10-7413-1102">+82-10-7413-1102</a></dd>
           </dl>
         </div>
         <ul>

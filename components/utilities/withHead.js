@@ -26,7 +26,7 @@ const withHead = (Component, pageName, pageRouter) => {
           <link rel='alternate' hrefLang='en-us' href={`${domain}en/${pageRouter}`} />
           <link rel='alternate' hrefLang='ko-kr' href={`${domain}ko/${pageRouter}`} />
           <link rel='canonical' href={currentUrl} />
-          <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+          <meta httpEquiv="X-UA-Compatible" content="IE=edge, chrome=1" />
           <meta name='format-detection' content='telephone=no' />
           <meta name='viewport' content='width=device-width, initial-scale=1, viewport-fit=cover' />
           <title>{title} : {pageName}</title>
