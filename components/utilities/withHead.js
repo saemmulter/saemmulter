@@ -19,7 +19,7 @@ const withHead = (Component, pageName) => {
       var siteName = 'Saemmulter'
     }
 
-    const domain = `https://domain.com/`
+    const domain = `https://saemmulter.vercel.app/`
 
     return (
       <>
@@ -34,7 +34,7 @@ const withHead = (Component, pageName) => {
           <meta property='og:description' content={description} />
           <meta property='og:url' content={domain} />
           <meta property='og:locale' content={local} />
-          <meta property='og:image' content={`${domain}saemmulter-og-image.png?${(Math.random() * 7).toString(7)}`} />
+          <meta property='og:image' content={`${domain}${i18n.language}-saemmulter-og-image.png?${(Math.random() * 7).toString(7)}`} />
           <meta property='og:type' content='website' />
           <meta property='og:site_name' content={siteName} />
         </Head>
