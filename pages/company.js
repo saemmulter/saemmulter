@@ -4,7 +4,6 @@ import styled from '@emotion/styled';
 import styles from '../styles/Company.module.sass';
 import { mq, mixin, Rem } from '../styles/designSystem';
 import withHead from '../components/utilities/withHead';
-import Header from '../components/layout/header';
 import Cover from '../components/layout/cover';
 import Subject from '../components/assets/subject';
 import ParagraphPrimary from '../components/assets/paragraphPrimary';
@@ -53,65 +52,62 @@ function Company(props) {
   const { t } = useTranslation('common')
 
   return (
-    <>
-      <Header />
-      <Container className={`${styles.container} container`}>
-        <Cover subject={t('header.company')} />
-        <Contents className='contents'>
-          <Definition>
-            <Subject
-              subjectBorder={false}
-              subjectName={t('company.subject1')}
-            />
-            <Description>
-              <Paragraphes>
-                <ParagraphPrimary paragraphPrimary={t('company.description1')} />
-                <CompanySaemmulter />
-              </Paragraphes>
-            </Description>
-          </Definition>
-          <Definition>
-            <Subject
-              subjectBorder={true}
-              subjectName={t('company.subject2')}
-            />
-            <Description>
-              <CompanyInfo />
-            </Description>
-          </Definition>
-          <Definition>
-            <Subject
-              subjectBorder={true}
-              subjectName={t('company.subject3')}
-            />
-            <Description>
-              <CompanyTimeline />
-            </Description>
-          </Definition>
-          <Definition>
-            <Subject
-              subjectBorder={true}
-              subjectName={t('company.subject4')}
-            />
-            <Description>
-              <Paragraphes>
-                <ParagraphPrimary paragraphPrimary={t('company.description4')} />
-              </Paragraphes>
-              <CompanyValues />
-            </Description>
-          </Definition>
-          <Definition>
-            <Subject
-              subjectBorder={true}
-              subjectName={t('company.subject5')}
-            />
-            <Description>
-              <CompanyPartners />
-            </Description>
-          </Definition>
-        </Contents>
-      </Container>
-    </>
+    <Container className={`${styles.container} container`}>
+      <Cover subject={t('header.company')} />
+      <Contents className='contents'>
+        <Definition>
+          <Subject
+            subjectBorder={false}
+            subjectName={t('company.subject1')}
+          />
+          <Description>
+            <Paragraphes>
+              <ParagraphPrimary paragraphPrimary={t('company.description1')} />
+              <CompanySaemmulter />
+            </Paragraphes>
+          </Description>
+        </Definition>
+        <Definition>
+          <Subject
+            subjectBorder={true}
+            subjectName={t('company.subject2')}
+          />
+          <Description>
+            <CompanyInfo />
+          </Description>
+        </Definition>
+        <Definition>
+          <Subject
+            subjectBorder={true}
+            subjectName={t('company.subject3')}
+          />
+          <Description>
+            <CompanyTimeline />
+          </Description>
+        </Definition>
+        <Definition>
+          <Subject
+            subjectBorder={true}
+            subjectName={t('company.subject4')}
+          />
+          <Description>
+            <Paragraphes>
+              <ParagraphPrimary paragraphPrimary={t('company.description4')} />
+            </Paragraphes>
+            <CompanyValues />
+          </Description>
+        </Definition>
+        <Definition>
+          <Subject
+            subjectBorder={true}
+            subjectName={t('company.subject5')}
+          />
+          <Description>
+            <CompanyPartners />
+          </Description>
+        </Definition>
+      </Contents>
+    </Container>
   )
 }
 

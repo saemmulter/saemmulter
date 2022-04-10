@@ -2,7 +2,6 @@ import { env } from 'process'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'react-i18next';
 import styled from '@emotion/styled';
-import Header from '../components/layout/header';
 import styles from '../styles/Home.module.sass';
 import { Rem, mixin } from '../styles/designSystem';
 import withHead from '../components/utilities/withHead';
@@ -48,57 +47,54 @@ function Home(props) {
   const youTubeSource = `https://www.youtube.com/embed/jnb7td19VbY`
 
   return (
-    <>
-      <Header />
-      <Container className={`${styles.container} container`}>
-        <Carousel />
-        <Contents className={styles.contents}>
+    <Container className={`${styles.container} container`}>
+      <Carousel />
+      <Contents className={styles.contents}>
+        <section>
+          <SubjectCenter subjectCenter={t('home.subject1')} />
+          <HomeDescription
+            descriptionPrimary={t('home.description1-1')}
+            descriptionSecondary={t('home.description1-2')}
+          />
+          <MoreLink linkHref={menuCompany} linkLabel={t('home.more-link')} />
+        </section>
+        <section>
+          <SubjectCenter subjectCenter={t('home.subject2')} />
+          <ImageItem><ImageProduct /></ImageItem>
+          <HomeDescription
+            descriptionPrimary={t('home.description2-1')}
+            descriptionSecondary={t('home.description2-2')}
+          />
+          <MoreLink linkHref={menuProducts} linkLabel={t('home.more-link')} />
+        </section>
+        <div className={styles.relations}>
           <section>
-            <SubjectCenter subjectCenter={t('home.subject1')} />
-            <HomeDescription
-              descriptionPrimary={t('home.description1-1')}
-              descriptionSecondary={t('home.description1-2')}
-            />
-            <MoreLink linkHref={menuCompany} linkLabel={t('home.more-link')} />
+            <div className={styles['heading-group']}>
+              <SubjectLeft subjectLeft={t('home.subject3')} />
+            </div>
+            <div className={styles['video--you-tube']}>
+              <YouTubePlayer htmlSrc={youTubeSource} />
+            </div>
           </section>
           <section>
-            <SubjectCenter subjectCenter={t('home.subject2')} />
-            <ImageItem><ImageProduct /></ImageItem>
-            <HomeDescription
-              descriptionPrimary={t('home.description2-1')}
-              descriptionSecondary={t('home.description2-2')}
-            />
-            <MoreLink linkHref={menuProducts} linkLabel={t('home.more-link')} />
+            <div className={styles['heading-group']}>
+              <SubjectLeft subjectLeft={t('home.subject4')} />
+              <div className={styles['link--see-more']}>
+                <LinkButton href={menuPrCenter}>{t('home.more-link')}</LinkButton>
+              </div>
+            </div>
+            <div className={styles.press}>
+              <LinkButton href={menuPrCenter}>
+                <strong>{t('home.description4-a')}</strong>
+                <p>{t('home.description4-p1')}</p>
+                <p>{t('home.description4-p2')}</p>
+                <p>{t('home.description4-p3')}</p>
+              </LinkButton>
+            </div>
           </section>
-          <div className={styles.relations}>
-            <section>
-              <div className={styles['heading-group']}>
-                <SubjectLeft subjectLeft={t('home.subject3')} />
-              </div>
-              <div className={styles['video--you-tube']}>
-                <YouTubePlayer htmlSrc={youTubeSource} />
-              </div>
-            </section>
-            <section>
-              <div className={styles['heading-group']}>
-                <SubjectLeft subjectLeft={t('home.subject4')} />
-                <div className={styles['link--see-more']}>
-                  <LinkButton href={menuPrCenter}>{t('home.more-link')}</LinkButton>
-                </div>
-              </div>
-              <div className={styles.press}>
-                <LinkButton href={menuPrCenter}>
-                  <strong>{t('home.description4-a')}</strong>
-                  <p>{t('home.description4-p1')}</p>
-                  <p>{t('home.description4-p2')}</p>
-                  <p>{t('home.description4-p3')}</p>
-                </LinkButton>
-              </div>
-            </section>
-          </div>
-        </Contents>
-      </Container>
-    </>
+        </div>
+      </Contents>
+    </Container>
   )
 }
 
