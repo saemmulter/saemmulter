@@ -13,10 +13,7 @@
   },
   "footer": {
     "company": "주식회사 샘물터",
-    "address": {
-      "term": "주소",
-      "description": "대전 대덕구 신탄진로 200 (연축동) 한국수자원공사 K-water 스타트업 허브 창업보육실 1호"
-    },
+    "address": "주소",
     "social": {
       "facebook": "Facebook 공식 페이지",
       "instagram": "Instagram 공식 페이지",
@@ -150,5 +147,6 @@
       "help1": "이 화면이 뜬다면 브라우저 전체 캡쳐를 한 후",
       "help2": "관리자 이메일 문의를 해 주시기를 바랍니다."
     }
-  }
+  },
+  "address": "대전광역시 서구 대덕대로 239 소셜캠퍼스온 403호"
 }

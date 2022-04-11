@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import styled from '@emotion/styled';
 import LinkButton from '../utilities/linkButton';
+import SaemmulterAddress from '../utilities/SaemmulterAddress';
 import { images } from '../../assets/images';
 import { mq, mixin, colors, Rem } from '../../styles/designSystem';
 import styles from '../../styles/Footer.module.sass';
@@ -54,7 +55,7 @@ function Footer() {
           <strong>{t('footer.company')}</strong>
           <dl>
             <dt>{t('footer.address.term')}</dt>
-            <dd><address>{t('footer.address.description')}</address></dd>
+            <dd><SaemmulterAddress /></dd>
             <dt>Mail</dt>
             <dd><a href="mailto:cgwateric@gmail.com">cgwateric@gmail.com</a></dd>
             <dt>Tel</dt>

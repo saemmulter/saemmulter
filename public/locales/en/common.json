@@ -13,10 +13,7 @@
   },
   "footer": {
     "company": "Saemmulter Inc.",
-    "address": {
-      "term": "Address",
-      "description": "1, Business incubation center, Start-up hub, K-water Bldg, 200, Sintanjin-ro, Daedeok-gu, Daejeon, 34350, Rep. of KOREA"
-    },
+    "address": "Address",
     "social": {
       "facebook": "Facebook official page",
       "instagram": "Instagram official page",
@@ -150,5 +147,6 @@
       "help1": "OOPS! Something went wrong,",
       "help2": "or this page isn’t working."
     }
-  }
+  },
+  "address": "403, Social-campus On, 239, Daedeok-daero, Seo-gu, Daejeon, 35229, Rep. of KOREA"
 }
