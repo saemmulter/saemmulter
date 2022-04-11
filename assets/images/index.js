@@ -40,5 +40,9 @@ export const images = {
       smile: require('./icons/company.smile.svg'),
       growth: require('./icons/company.growth.svg'),
     },
+    error: {
+      e404: require('./icons/error-404.svg'),
+      e500: require('./icons/error-500.svg'),
+    },
   },
 }

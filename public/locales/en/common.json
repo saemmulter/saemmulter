@@ -139,5 +139,16 @@
     "y2020i01": "Won the grand prize at the ‘2nd Seoul Water Industry Sprout Enterprise Contest’",
     "y2020i02": "Convention on the Promotion of Industry with Wide Area Cooperation Rights",
     "y2020i03": "‘2020 Sejong Special Self-Governing Public Data Utilization Startup Contest’ Idea Planning Division Excellence Award"
+  },
+  "error": {
+    "error404": {
+      "message": "Page not found",
+      "help": "This is not the web page you are looking for."
+    },
+    "error500": {
+      "message": "Server-side error occurred",
+      "help1": "OOPS! Something went wrong,",
+      "help2": "or this page isn’t working."
+    }
   }
 }
