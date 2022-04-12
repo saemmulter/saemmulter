@@ -202,7 +202,7 @@ function Header() {
           </NavigationBar>
         </Contents>
       </Container>
-      {isIE && <IE><p><strong>오래된 브라우저</strong>를 사용하고 있군요. 안전하고 편리한 인터넷을 위해 <LinkButton href="http://browsehappy.com/">브라우저를 업그레이드</LinkButton> 하세요.</p></IE>}
+      {isIE && <IE><p><strong>오래된 브라우저</strong>를 사용하고 있군요. 안전하고 편리한 인터넷을 위해 <LinkButton href="https://browsehappy.com/">브라우저를 업그레이드</LinkButton> 하세요.</p></IE>}
     </>
   )
 }
