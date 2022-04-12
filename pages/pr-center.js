@@ -54,12 +54,6 @@ const Description = styled.div(({ directionColumn }) => ({
 function Company(props) {
   const { i18n, t } = useTranslation('common')
 
-  if (i18n.language === 'ko') {
-    var isKorean = true
-  } else {
-    var isKorean = false
-  }
-
   return (
     <Container className={`${styles.container} container`}>
       <Cover subject={t('header.pr-center')} />
