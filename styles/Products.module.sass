@@ -1,0 +1,70 @@
+@import './designSystem.sass'
+
+.video--you-tube
+  position: relative
+  padding-top: 56.25%
+  height: 0
+
+  iframe
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    border: 0
+
+.feature-item
+  display: flex
+  flex-direction: column
+  margin: rem(50) 0
+
+  +mq(minLarge)
+    flex-direction: row
+
+  .feature-term
+    display: flex
+
+    +mq(minLarge)
+      width: rem(335)
+
+    h3
+      +style(col)
+      display: flex
+      flex-direction: column
+      justify-content: center
+      padding-left: rem(15)
+      +font-weight(bold)
+      font-size: rem(24)
+      line-height: 1.25
+      +color(important)
+
+      +mq(minLarge)
+        height: rem(70)
+        letter-spacing: -.05em
+
+      span
+        display: block
+
+  .feature-description
+    overflow: hidden
+
+    +mq(minLarge)
+      +style(col)
+      padding-left: rem(20)
+
+    ul
+      +mq(minLarge)
+        margin: rem(-10) 0
+
+      li
+        margin: rem(10) 0
+        padding-left: rem(10)
+        +font-weight(regular)
+        font-size: rem(16)
+        text-indent: rem(-10)
+        line-height: 1.375
+
+        &::before
+          content: '·'
+          padding-right: rem(5)
+          +font-weight(black)

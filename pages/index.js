@@ -12,7 +12,7 @@ import MoreLink from '../components/pages/home/moreLink';
 import SubjectLeft from '../components/pages/home/subjectLeft';
 import Carousel from '../components/pages/home/carousel';
 
-const ImageProductSource = `/home.product.png?${(Math.random() * 7).toString(7)}`
+const ImageProductSource = `/image.product.png?${(Math.random() * 7).toString(7)}`
 
 const Container = styled.div({
   width: '100%',

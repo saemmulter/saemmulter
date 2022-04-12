@@ -44,5 +44,13 @@ export const images = {
       e404: require('./icons/error-404.svg'),
       e500: require('./icons/error-500.svg'),
     },
+    products: {
+      features: {
+        features1: require('./icons/products.features1.svg'),
+        features2: require('./icons/products.features2.svg'),
+        features3: require('./icons/products.features3.svg'),
+        features4: require('./icons/products.features4.svg'),
+      },
+    },
   },
 }
