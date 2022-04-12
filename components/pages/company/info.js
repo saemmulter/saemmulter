@@ -51,15 +51,13 @@ function CompanyInfo() {
       <DefinitionTerm>{t('info.term1')}</DefinitionTerm>
       <DefinitionDescription>
         <time dateTime='2019-07-15'>2019. 07. 15.</time>
-        {/*  */}
-        <span> </span>
+        {' '}
         <span>({t('info.description1')})</span>
       </DefinitionDescription>
       <DefinitionTerm>{t('info.term2')}</DefinitionTerm>
       <DefinitionDescription>
         <time dateTime='2020-12-30'>2020. 12. 30.</time>
-        {/*  */}
-        <span> </span>
+        {' '}
         <span>({t('info.description2')})</span>
       </DefinitionDescription>
       <DefinitionTerm>{t('info.term3')}</DefinitionTerm>

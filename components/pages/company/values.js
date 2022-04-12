@@ -39,8 +39,7 @@ function CompanyValues() {
         <div className={styles.context}>
           <h3>
             {t('values.term1-1')}
-            {/*  */}
-            <span> </span>
+            {' '}
             <span>{t('values.term1-2')}</span>
           </h3>
           <p>{t('values.description1')}</p>
@@ -50,9 +49,8 @@ function CompanyValues() {
         <div className={styles.context}>
           <h3>
             {t('values.term2-1')}
-            {/*  */}
-            <span> </span>
-            <span>{t('values.term2-2')}</span>
+            {' '}
+            <span> {t('values.term2-2')}</span>
           </h3>
           <p>{t('values.description2')}</p>
         </div>

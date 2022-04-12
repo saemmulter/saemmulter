@@ -177,9 +177,9 @@ function Carousel() {
           <div className='item'>
             <strong>
               {t('carousel.subject2-1')}
-              {/*  */}
+              {' '}
               <span>{t('carousel.subject2-2')}</span>
-              {/*  */}
+              {' '}
               {t('carousel.subject2-3')}
             </strong>
             <p>{t('carousel.description2')}</p>
@@ -193,9 +193,9 @@ function Carousel() {
           <div className='item'>
             <strong>
               {t('carousel.subject3-1')}
-              {/*  */}
+              {' '}
               <span>{t('carousel.subject3-2')}</span>
-              {/*  */}
+              {' '}
               {t('carousel.subject3-3')}
             </strong>
             <p>{t('carousel.description3')}</p>
