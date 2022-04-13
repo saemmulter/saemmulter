@@ -80,8 +80,8 @@ function CompanyPress() {
       dateTimeMachine: '2020-07-13',
       dateTimeHuman: '2020/07/13',
       journal: `${t('press.journal1')}`,
-      thumbnailEn: `/press-en-001.png`,
-      thumbnailKo: `/press-ko-001.png`,
+      thumbnailEn: `/press-en-001.png?${(Math.random() * 7).toString(7)}`,
+      thumbnailKo: `/press-ko-001.png?${(Math.random() * 7).toString(7)}`,
       link: `https://www.ecomedia.co.kr/news/newsview.php?ncode=1065584739451001`,
     },
     {
@@ -91,8 +91,8 @@ function CompanyPress() {
       dateTimeMachine: '2020-08-30',
       dateTimeHuman: '2020/08/30',
       journal: `${t('press.journal2')}`,
-      thumbnailEn: `/press-002.png`,
-      thumbnailKo: `/press-002.png`,
+      thumbnailEn: `/press-002.png?${(Math.random() * 7).toString(7)}`,
+      thumbnailKo: `/press-002.png?${(Math.random() * 7).toString(7)}`,
       link: `https://www.hellodd.com/news/articleView.html?idxno=72720`,
     },
     {
@@ -102,8 +102,8 @@ function CompanyPress() {
       dateTimeMachine: '2020-09-10',
       dateTimeHuman: '2020/09/10',
       journal: `${t('press.journal3')}`,
-      thumbnailEn: `/press-003.png`,
-      thumbnailKo: `/press-003.png`,
+      thumbnailEn: `/press-003.png?${(Math.random() * 7).toString(7)}`,
+      thumbnailKo: `/press-003.png?${(Math.random() * 7).toString(7)}`,
       link: `https://www.etnews.com/20200910000100`,
     },
     {
@@ -113,8 +113,8 @@ function CompanyPress() {
       dateTimeMachine: '2020-12-18',
       dateTimeHuman: '2020/12/18',
       journal: `${t('press.journal4')}`,
-      thumbnailEn: `/press-004.png`,
-      thumbnailKo: `/press-004.png`,
+      thumbnailEn: `/press-004.png?${(Math.random() * 7).toString(7)}`,
+      thumbnailKo: `/press-004.png?${(Math.random() * 7).toString(7)}`,
       link: `https://www.gocj.net/news/articleView.html?idxno=112866`,
     },
   ];

@@ -1,0 +1,63 @@
+@import './designSystem.sass'
+
+.download
+  &-item
+    display: flex
+    flex-direction: column
+
+    +mq(minXsmall)
+      flex-direction: row
+
+  &-thumbnail
+    width: 100%
+
+    +mq(minXsmall)
+      width: rem(420)
+
+  &-description
+    +mq(maxTablet)
+      margin: 0 rem(15)
+
+    +mq(minXsmall)
+      +style(col)
+      padding-left: rem(50)
+
+    h3
+      +font-weight(bold)
+      font-size: rem(22)
+      line-height: 1.18181818
+      +color(important)
+
+      +mq(maxTablet)
+        margin: rem(20) 0
+
+  &-paragraphes
+    +mq(minXsmall)
+      margin: rem(50) 0
+
+    p
+      margin: rem(10) 0
+      +font-weight(regular)
+      font-size: rem(16)
+      line-height: 1.5
+
+      +mq(minXsmall)
+        margin: rem(15) 0
+
+  &-link
+    display: flex
+
+    +mq(maxTablet)
+      justify-content: flex-end
+      margin-top: rem(20)
+
+    a
+      display: inline-flex
+      align-items: center
+      border: 2px solid $color-accent
+      border-radius: rem(16)
+      padding: 0 rem(20)
+      height: rem(32)
+      +font-weight(regular)
+      font-size: rem(16)
+      +color(important)
