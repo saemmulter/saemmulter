@@ -1,3 +1,4 @@
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 import styled from '@emotion/styled';
 import styles from '../../../styles/Products.module.sass';
@@ -18,9 +19,9 @@ const YouTubeContainer = styled.div({
   },
 });
 
-const Paragraph = styled.p({
-  fontWeight: fontWeights.bold,
-  fontSize: Rem(22),
+const Paragraph = styled.p(({ isKorean }) => ({
+  fontWeight: fontWeights.thin,
+  fontSize: Rem(18),
   lineHeight: 1.36363636,
   color: colors.default,
   [mq.maxSmall]: {
@@ -31,13 +32,43 @@ const Paragraph = styled.p({
   [mq.minLarge]: {
     ...mixin.col,
     paddingLeft: Rem(30),
-    fontSize: Rem(28),
+    fontSize: Rem(38),
+    fontWeight: fontWeights.bold,
+    '& span': {
+      display: 'block',
+    },
   },
   '& strong': {
+    display: isKorean ? 'inline' : 'inline-block',
+    position: 'relative',
     fontWeight: fontWeights.black,
-    color: colors.accent,
+    color: 'transparent',
+    '&::before': {
+      content: '""',
+      display: 'block',
+      position: 'absolute',
+      bottom: isKorean ? 0 : Rem(2),
+      left: 0,
+      width: '100%',
+      height: Rem(5),
+      backgroundColor: colors.accent,
+      [mq.minLarge]: {
+        bottom: isKorean ? 0 : Rem(5),
+        height: Rem(10),
+      },
+    },
+    '&::after': {
+      content: 'attr(placeholder)',
+      position: 'absolute',
+      left: 0,
+      fontWeight: fontWeights.black,
+      color: colors.important,
+      [mq.minLarge]: {
+        top: isKorean ? `-${Rem(2)}` : Rem(2),
+      },
+    },
   },
-});
+}));
 
 function ProductsYouTube() {
   const { i18n, t } = useTranslation('common')
@@ -53,7 +84,16 @@ function ProductsYouTube() {
           {i18n.language === 'ko' && <YouTubePlayer htmlSrc={youTubeSourceKo} />}
         </div>
       </YouTubeContainer>
-      <Paragraph>{t('products.description2')}</Paragraph>
+      {i18n.language === 'en' &&
+        <Paragraph isKorean={false}>
+          We will show you how to assemble and use the&nbsp;<strong placeholder='Woomulsem'>Woomulsem</strong>
+        </Paragraph>
+      }
+      {i18n.language === 'ko' &&
+        <Paragraph isKorean={true}>
+          <strong placeholder='우물셈'>우물셈</strong>의&nbsp;<span>조립법과 사용법을&nbsp;</span>알려드립니다
+        </Paragraph>
+      }
     </VideoContainer>
   )
 }
