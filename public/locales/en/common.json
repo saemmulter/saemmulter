@@ -177,5 +177,12 @@
     "subject1": "Company Introduction",
     "term1": "Company Introduction ver_01"
   },
+  "contact-us": {
+    "subject1": "Location",
+    "subject2": "Proposal / Question",
+    "term1": "Address",
+    "term2": "Email",
+    "term3": "Tel"
+  },
   "address": "403, Social-campus On, 239, Daedeok-daero, Seo-gu, Daejeon, 35229, Rep. of KOREA"
 }

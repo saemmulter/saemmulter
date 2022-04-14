@@ -1,0 +1,59 @@
+@import './designSystem.sass'
+
+.google-map
+  position: relative
+  padding-top: 56.25%
+  height: 0
+
+  iframe
+    position: absolute
+    top: 0
+    left: 0
+    border: 0
+    width: 100%
+    height: 100%
+
+.location-definition
+  display: flex
+  flex-wrap: wrap
+
+  +mq(maxTablet)
+    padding-top: rem(10)
+
+  +mq(minXsmall)
+    margin: rem(-10) 0
+
+  dt, dd
+    margin: rem(10) 0
+
+  dt
+    width: rem(25)
+
+  dd
+    display: flex
+    align-items: center
+    padding-left: rem(15)
+    width: calc(100% - rem(25))
+    +font-weight(regular)
+    font-size: rem(16)
+    line-height: 1.25
+
+    +mq(minXsmall)
+      padding-left: rem(10)
+      width: calc(100% - rem(30))
+      font-size: rem(18)
+
+    a
+      +color(default)
+
+      &:hover, &:focus
+        text-decoration: underline
+
+.announcement
+  strong
+    +font-weight(bold)
+    font-size: rem(18)
+
+    b
+      +font-weight(black)
+      +color(accent)
