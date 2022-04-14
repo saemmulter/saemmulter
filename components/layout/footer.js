@@ -2,7 +2,9 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import styled from '@emotion/styled';
 import LinkButton from '../utilities/linkButton';
-import SaemmulterAddress from '../utilities/SaemmulterAddress';
+import SaemmulterAddress from '../utilities/officeAddress';
+import SaemmulterEmail from '../utilities/officeEmail';
+import SaemmulterTel from '../utilities/officeTel';
 import { images } from '../../assets/images';
 import { mq, mixin, colors, Rem } from '../../styles/designSystem';
 import styles from '../../styles/Footer.module.sass';
@@ -57,9 +59,9 @@ function Footer() {
             <dt>{t('footer.address.term')}</dt>
             <dd><SaemmulterAddress /></dd>
             <dt>Mail</dt>
-            <dd><a href="mailto:cgwateric@gmail.com">cgwateric@gmail.com</a></dd>
+            <dd><SaemmulterEmail /></dd>
             <dt>Tel</dt>
-            <dd><a href="tel:+82-10-7413-1102">+82-10-7413-1102</a></dd>
+            <dd><SaemmulterTel /></dd>
           </dl>
         </div>
         <ul>
