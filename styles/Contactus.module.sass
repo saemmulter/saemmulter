@@ -49,7 +49,13 @@
       &:hover, &:focus
         text-decoration: underline
 
-.announcement
+.caution
+  padding-left: rem(15)
+  padding-bottom: rem(15)
+
+  +mq(minSmall)
+    padding: 0 0 rem(20)
+
   strong
     +font-weight(bold)
     font-size: rem(18)
@@ -57,3 +63,12 @@
     b
       +font-weight(black)
       +color(accent)
+
+.notice
+  +font-weight(bold)
+  font-size: rem(16)
+  line-height: 1.25
+  +color(accent)
+
+  +mq(minSmall)
+    margin-left: rem(200)

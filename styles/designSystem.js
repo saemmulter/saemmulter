@@ -32,7 +32,7 @@ export const colors = {
   white: '#FFF',
   default: '#5A433D',
   accent: '#1EBBEF',
-  primary: 'rgba(rgba(90, 67, 61, 0.7)',
+  primary: 'rgba(90, 67, 61, 0.7)',
   important: '#222',
   background: '#F2F2F2',
 };
