@@ -52,5 +52,12 @@ export const images = {
         features4: require('./icons/products.features4.svg'),
       },
     },
+    contactUs: {
+      location: {
+        address: require('./icons/location.address.svg'),
+        email: require('./icons/location.email.svg'),
+        tel: require('./icons/location.tel.svg'),
+      },
+    },
   },
 }

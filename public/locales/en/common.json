@@ -177,5 +177,36 @@
     "subject1": "Company Introduction",
     "term1": "Company Introduction ver_01"
   },
+  "contact-us": {
+    "subject1": "Location",
+    "subject2": "Proposal / Question",
+    "term1": "Address",
+    "term2": "Email",
+    "term3": "Tel"
+  },
+  "request": {
+    "label1": "Name of Organization",
+    "label2": "Point of Contact",
+    "label3": "Phone",
+    "label4": "FAX",
+    "label5": "Email",
+    "label6": "Contents",
+    "placeholder1": "e.g) Saemmulter Inc.",
+    "placeholder2": "e.g) Jane Doe",
+    "placeholder3": "e.g) +82-10-1234-5678",
+    "placeholder4": "e.g) +82-505-1234",
+    "placeholder5": "e.g) jane.doe@example.com",
+    "placeholder6": "Please enter the contents",
+    "error1": "Please enter the name of organization correctly.",
+    "error2": "Please enter the point of contact (contact name) correctly.",
+    "error3": "Please enter the phone number correctly.",
+    "error4": "Please enter the FAX number correctly.",
+    "error5": "Please enter your email address in the correct format.",
+    "error6": "Content is required. Please enter the contents.",
+    "notice": "If you would like to attach the file, please send me an email directly.",
+    "submit": "Submit",
+    "alert-success": "Sending succeeded. We will check and contact you.",
+    "alert-fail": "Send failed. Please try again."
+  },
   "address": "403, Social-campus On, 239, Daedeok-daero, Seo-gu, Daejeon, 35229, Rep. of KOREA"
 }
