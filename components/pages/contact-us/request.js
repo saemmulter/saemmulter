@@ -192,6 +192,7 @@ function ContactUsRequest() {
                 {...register
                   ('phone', {
                     required: true,
+                    minLength: 15,
                   })
                 }
               />
@@ -209,6 +210,7 @@ function ContactUsRequest() {
                 {...register
                   ('fax', {
                     required: false,
+                    minLength: 12,
                   })
                 }
               />
