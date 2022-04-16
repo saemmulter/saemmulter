@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import styled from '@emotion/styled';
 import styles from '../../../styles/Products.module.sass';
 import YouTubePlayer from '../../utilities/youTubePlayer';
 import { colors, fontWeights, mixin, mq, Rem } from '../../../styles/designSystem';
+import { images } from '../../../assets/images';
 
 const VideoContainer = styled.div({
   display: 'flex',
@@ -18,6 +19,22 @@ const YouTubeContainer = styled.div({
     width: Rem(475),
   },
 });
+
+const YouTubeButton = styled.button(({ imageSource }) => ({
+  backgroundImage: `url(${imageSource})`,
+  '& i': {
+    width: Rem(70),
+    height: Rem(79),
+    background: `url(${images.icons.youTube.button}) no-repeat 50% 50%/contain`,
+    filter: 'invert(100%) sepia(79%) saturate(2%) hue-rotate(105deg) brightness(111%) contrast(101%)',
+    transition: 'all .3s linear',
+  },
+  '&:hover, &:focus': {
+    '& i': {
+      filter: 'invert(57%) sepia(70%) saturate(543%) hue-rotate(151deg) brightness(96%) contrast(95%)',
+    },
+  },
+}));
 
 const Paragraph = styled.p(({ isKorean }) => ({
   fontWeight: fontWeights.thin,
@@ -73,15 +90,29 @@ const Paragraph = styled.p(({ isKorean }) => ({
 function ProductsYouTube() {
   const { i18n, t } = useTranslation('common')
 
-  const youTubeSourceEn = `https://www.youtube.com/embed/LCipFMsG5Vc`
-  const youTubeSourceKo = `https://www.youtube.com/embed/LCipFMsG5Vc`
+  const youTubeSourceEn = `LCipFMsG5Vc`
+  const youTubeSourceKo = `LCipFMsG5Vc`
+
+  const [visibleYouTubePlayer, setVisibleYouTubePlayer] = useState(false);
 
   return (
     <VideoContainer>
       <YouTubeContainer>
         <div className={styles['video--you-tube']}>
-          {i18n.language === 'en' && <YouTubePlayer htmlSrc={youTubeSourceEn} />}
-          {i18n.language === 'ko' && <YouTubePlayer htmlSrc={youTubeSourceKo} />}
+          {i18n.language === 'ko' ?
+            <>
+              {visibleYouTubePlayer
+                ? <YouTubePlayer htmlSrc={youTubeSourceKo} />
+                : <YouTubeButton imageSource={`/youtube.products.ko.png?${(Math.random() * 7).toString(7)}`} onClick={() => setVisibleYouTubePlayer(true)}><i /></YouTubeButton>
+              }
+            </> :
+            <>
+              {visibleYouTubePlayer
+                ? <YouTubePlayer htmlSrc={youTubeSourceEn} />
+                : <YouTubeButton imageSource={`/youtube.products.en.png?${(Math.random() * 7).toString(7)}`} onClick={() => setVisibleYouTubePlayer(true)}><i /></YouTubeButton>
+              }
+            </>
+          }
         </div>
       </YouTubeContainer>
       {i18n.language === 'en' &&

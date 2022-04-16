@@ -2,7 +2,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'react-i18next';
 import styled from '@emotion/styled';
 import styles from '../styles/Prcenter.module.sass';
-import { mq, mixin, Rem } from '../styles/designSystem';
+import { mq, mixin, Rem, fontWeights } from '../styles/designSystem';
 import withHead from '../components/utilities/withHead';
 import Cover from '../components/layout/cover';
 import Subject from '../components/assets/subject';
@@ -51,8 +51,15 @@ const Description = styled.div(({ wide }) => ({
   },
 }));
 
+const YouTubeEnglishNotice = styled.p({
+  margin: `0 ${Rem(15)}`,
+  paddingBottom: Rem(15),
+  fontWeight: fontWeights.bold,
+  color: 'red',
+});
+
 function Products(props) {
-  const { t } = useTranslation('common')
+  const { i18n, t } = useTranslation('common')
 
   return (
     <Container className={`${styles.container} container`}>
@@ -73,6 +80,7 @@ function Products(props) {
             subjectName={t('products.subject2')}
           />
           <Description wide={true}>
+            {i18n.language === 'en' && <YouTubeEnglishNotice>An English video is being produced. Please use YouTube’s automatic translation function.</YouTubeEnglishNotice>}
             <ProductsYouTube />
           </Description>
         </Definition>
