@@ -99,6 +99,10 @@ const SubmitButton = styled.button({
   color: colors.accent,
 });
 
+SubmitButton.defaultProps = {
+  type: 'button',
+};
+
 function ContactUsRequest() {
   const { i18n, t } = useTranslation('common')
 
@@ -257,7 +261,7 @@ function ContactUsRequest() {
           </FormGroup>
           <p className={styles['notice']}>{t('request.notice')}</p>
           <ButtonContainer>
-            <SubmitButton type='submit'>{t('request.submit')}</SubmitButton>
+            <SubmitButton>{t('request.submit')}</SubmitButton>
           </ButtonContainer>
         </fieldset>
       </form>
