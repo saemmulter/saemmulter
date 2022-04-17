@@ -11,10 +11,10 @@ const nextConfig = {
   },
   images: {
     disableStaticImages: true,
-  },
+  }
 }
 
 module.exports = withImages({
   nextConfig,
-  i18n,
+  i18n
 })
