@@ -134,7 +134,7 @@ function Header() {
   return (
     <>
       <Container open={open}>
-        <Contents className={styles.container}>
+        <Contents className={styles.container} role='navigation'>
           <SkipToContent href="#start-of-content">{t('header.skip-to-content')}</SkipToContent>
           <h1>
             <LinkButton href={menuMain}>

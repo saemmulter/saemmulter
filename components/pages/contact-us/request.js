@@ -134,14 +134,13 @@ function ContactUsRequest() {
 
   return (
     <Container>
-      <p className={styles['caution']}>
+      <p className={styles['caution']} aria-hidden='true'>
         {i18n.language === 'en'
           ? <strong aria-hidden='true'>Fields marked <b>&#8270;</b> are required.</strong>
           : <strong aria-hidden='true'><b>&#8270;</b> 표시가 있는 항목은 필수입니다.</strong>
         }
       </p>
       <form
-        role='form'
         ref={form}
         onSubmit={handleSubmit(onSubmit)}
       >
@@ -156,6 +155,7 @@ function ContactUsRequest() {
                 placeholder={t('request.placeholder1')}
                 type={'text'}
                 aria-required={'true'}
+                aria-invalid={errors.organization ? 'true' : null}
                 aria-describedby={errors.organization ? 'error-organization' : null}
                 {...register
                   ('organization', {
@@ -175,6 +175,7 @@ function ContactUsRequest() {
                 placeholder={t('request.placeholder2')}
                 type={'text'}
                 aria-required={'true'}
+                aria-invalid={errors.contact ? 'true' : null}
                 aria-describedby={errors.contact ? 'error-contact' : null}
                 {...register
                   ('contact', {
@@ -194,6 +195,7 @@ function ContactUsRequest() {
                 placeholder={t('request.placeholder3')}
                 type={'text'}
                 aria-required={'true'}
+                aria-invalid={errors.phone ? 'true' : null}
                 aria-describedby={errors.phone ? 'error-phone' : null}
                 {...register
                   ('phone', {
@@ -212,6 +214,7 @@ function ContactUsRequest() {
                 id={'fax'}
                 placeholder={t('request.placeholder4')}
                 type={'text'}
+                aria-invalid={errors.fax ? 'true' : null}
                 aria-describedby={errors.fax ? 'error-fax' : null}
                 {...register
                   ('fax', {
@@ -231,6 +234,7 @@ function ContactUsRequest() {
                 placeholder={t('request.placeholder5')}
                 type={'email'}
                 aria-required={'true'}
+                aria-invalid={errors.email ? 'true' : null}
                 aria-describedby={errors.email ? 'error-email' : null}
                 {...register
                   ('email', {
@@ -251,6 +255,7 @@ function ContactUsRequest() {
                 id={'contents'}
                 placeholder={t('request.placeholder6')}
                 aria-required={'true'}
+                aria-invalid={errors.contents ? 'true' : null}
                 aria-describedby={errors.contents ? 'error-context' : null}
                 {...register
                   ('contents', {
