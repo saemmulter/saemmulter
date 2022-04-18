@@ -1,3 +1,4 @@
+// autoprefixer  
 @import './designSystem.sass'
 
 .download
@@ -44,12 +45,22 @@
       +mq(minXsmall)
         margin: rem(15) 0
 
-  &-link
+  &-links
     display: flex
+    justify-content: flex-end
 
     +mq(maxTablet)
-      justify-content: flex-end
       margin-top: rem(20)
+
+    +mq(minXsmall)
+      flex-direction: row-reverse
+
+    li
+      +mq(maxTablet)
+        margin-left: rem(15)
+
+      +mq(minXsmall)
+        margin-right: rem(15)
 
     a
       display: inline-flex

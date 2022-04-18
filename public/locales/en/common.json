@@ -174,8 +174,12 @@
     "description4-2": "Reduce installation costs, space, and compensation costs for hardware protection."
   },
   "downloads": {
+    "button1": "Preview",
+    "button2": "Download",
     "subject1": "Company Introduction",
-    "term1": "Company Introduction ver_01"
+    "subject2": "Company Leaflet",
+    "term1": "Company Introduction ver_01",
+    "term2": "Company Introduction ver_02 (Korean)"
   },
   "contact-us": {
     "subject1": "Location",
