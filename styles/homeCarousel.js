@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { images } from '../assets/images';
-import { mq, Rem } from './designSystem';
+import { colors, mq, Rem } from './designSystem';
 
 export const HomeCarousel = styled.div({
   '& .slick-list, & .slick-slider': {
@@ -82,9 +82,11 @@ export const HomeCarousel = styled.div({
     transform: 'translate(0,-50%)',
     marginTop: Rem(70),
     border: 'none',
+    borderRadius: '100%',
     width: Rem(50),
     height: Rem(50),
     cursor: 'pointer',
+    fontSize: 0,
     color: 'transparent',
     outline: 0,
     [mq.minXsmall]: {
@@ -93,9 +95,11 @@ export const HomeCarousel = styled.div({
     [mq.minXlarge]: {
       transform: 'translate(-50%,-50%)',
     },
-    '&:focus, &:hover': {
-      color: 'transparent',
+    '&:hover': {
       outline: 0,
+    },
+    '&:focus-visible': {
+      outline: `${colors.accent} auto ${Rem(5)}`,
     },
   },
   '& .slick-prev': {

@@ -155,14 +155,20 @@ $color-primary: rgba(90, 67, 61, 0.7)
 
   @if $style == screenReaderOnly
     position: absolute
+    overflow: hidden
+    margin: 0
     width: 1px
     height: 1px
-    padding: 0
+    clip: rect(1px, 1px, 1px, 1px)
+
+  @if $style == visuallyHiddenFocuable
+    position: absolute
     overflow: hidden
-    clip: rect(0,0,0,0)
-    white-space: nowrap
-    clip-path: inset(50%)
-    border: 0
+    z-index: 20
+    margin: 0
+    width: auto
+    height: auto
+    clip: auto
 
 =clamp($line, $maxheight, $lineheight)
   overflow: hidden

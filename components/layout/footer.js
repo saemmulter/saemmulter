@@ -27,6 +27,10 @@ const Contents = styled.div({
   },
 });
 
+const Heading = styled.h2({
+  ...mixin.screenReaderOnly,
+});
+
 const LinkSocialFacebook = styled.i({
   backgroundImage: `url(${images.logos.social.facebook})`,
 });
@@ -48,23 +52,32 @@ const LinkSocialAlibaba = styled.i({
 });
 
 function Footer() {
-  const { t } = useTranslation('common')
+  const { i18n, t } = useTranslation('common')
 
   return (
     <Container>
-      <Contents className={styles.container}>
+      <Contents role='contentinfo' aria-labelledby='footer-heading' className={styles.container}>
+        <Heading id='footer-heading'>Saemmulter Footer</Heading>
         <div className={styles.laws}>
           <strong>{t('footer.company')}</strong>
           <dl>
             <dt>{t('footer.address.term')}</dt>
             <dd><SaemmulterAddress /></dd>
+            {i18n.language === 'ko' &&
+              <>
+                <dt>대표이사</dt>
+                <dd>윤필선</dd>
+                <dt>사업자등록번호</dt>
+                <dd>511-81-26566</dd>
+              </>
+            }
             <dt>Mail</dt>
             <dd><SaemmulterEmail /></dd>
             <dt>Tel</dt>
             <dd><SaemmulterTel /></dd>
           </dl>
         </div>
-        <ul>
+        <ul aria-label='Social Media Links'>
           <li><LinkButton href='https://www.facebook.com/CleanGroundwaterLab/'><LinkSocialFacebook aria-label={t('footer.social.facebook')}></LinkSocialFacebook></LinkButton></li>
           <li><LinkButton href='https://www.instagram.com/cleangroundwater.tech'><LinkSocialInstagram aria-label={t('footer.social.instagram')}></LinkSocialInstagram></LinkButton></li>
           <li><LinkButton href='https://www.youtube.com/channel/UCNPjWF6bT6GyMOPQtIDbh5g'><LinkSocialYouTube aria-label={t('footer.social.youtube')}></LinkSocialYouTube></LinkButton></li>

@@ -15,6 +15,7 @@ function GoogleMap() {
       width="600" height="450"
       allowFullScreen={true}
       loading="lazy"
+      title="Google Map"
       referrerPolicy="no-referrer-when-downgrade"
     />
   )

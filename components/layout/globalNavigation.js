@@ -29,26 +29,13 @@ const Dummy = styled.div({
   ...mixin.colAuto,
 });
 
-const LinkKorean = styled.a(({ isKorean }) => ({
+const LinkLanguage = styled.a(({ isKorean }) => ({
   fontWeight: isKorean ? fontWeights.black : fontWeights.regular,
   opacity: isKorean ? 1 : 0.7
 }));
 
-const LinkEnglish = styled.a(({ isEnglish }) => ({
-  fontWeight: isEnglish ? fontWeights.black : fontWeights.regular,
-  opacity: isEnglish ? 1 : 0.7
-}));
-
 function GlobalNavigation({ open, setOpen }) {
   const { i18n, t } = useTranslation('common')
-
-  if (i18n.language === 'ko') {
-    var isKorean = true
-    var isEnglish = false
-  } else {
-    var isKorean = false
-    var isEnglish = true
-  }
 
   const menuCompany = `/${i18n.language}/company`
   const menuProducts = `/${i18n.language}/products`
@@ -73,8 +60,54 @@ function GlobalNavigation({ open, setOpen }) {
       </ol>
       <Dummy />
       <ul>
-        <li><LinkKorean href={`/ko${router.pathname}`} locale='ko' aria-label='Choose Korean' isKorean={isKorean}>Ko</LinkKorean></li>
-        <li><LinkEnglish href={`/en${router.pathname}`} locale='en' aria-label='Choose English' isEnglish={isEnglish}>En</LinkEnglish></li>
+        {i18n.language === 'ko'
+          ?
+          <>
+            <li>
+              <LinkLanguage
+                href={`/ko${router.pathname}`}
+                locale='ko'
+                aria-label='한국어 선택'
+                isKorean={true}
+              >
+                Ko
+              </LinkLanguage>
+            </li>
+            <li>
+              <LinkLanguage
+                href={`/en${router.pathname}`}
+                locale='en'
+                aria-label='영어 선택'
+                isKorean={false}
+              >
+                En
+              </LinkLanguage>
+            </li>
+          </>
+          :
+          <>
+            <li>
+              <LinkLanguage
+                href={`/ko${router.pathname}`}
+                locale='ko'
+                aria-label='Choose Korean'
+                isKorean={false}
+              >
+                Ko
+              </LinkLanguage>
+            </li>
+            <li>
+              <LinkLanguage
+                href={`/en${router.pathname}`}
+                locale='en'
+                aria-label='Choose English'
+                isKorean={true}
+              >
+                En
+              </LinkLanguage>
+            </li>
+          </>
+        }
       </ul>
     </NavigationBar>
   )
