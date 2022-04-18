@@ -4,7 +4,7 @@ import { isIE } from 'react-device-detect';
 import styled from '@emotion/styled';
 import LinkButton from '../utilities/linkButton';
 import { images } from '../../assets/images';
-import { mq, fontWeights, Rem, colors } from '../../styles/designSystem';
+import { mq, fontWeights, Rem, colors, mixin } from '../../styles/designSystem';
 import styles from '../../styles/Header.module.sass';
 import ToggleNavigation from './toggleNavigation';
 import GlobalNavigation from './globalNavigation';
@@ -42,6 +42,29 @@ const Contents = styled.div({
   },
   [mq.minXsmall]: {
     height: Rem(110),
+  },
+});
+
+const SkipToContent = styled.a({
+  ...mixin.visuallyHiddenFocuable,
+  top: 0,
+  left: 0,
+  transition: '80ms cubic-bezier(0.33, 1, 0.68, 1)',
+  transitionProperty: 'color,background-color,box-shadow,border-color',
+  padding: Rem(15),
+  backgroundColor: colors.accent,
+  fontWeight: fontWeights.regular,
+  fontSize: Rem(16),
+  color: colors.white,
+  '&:focus': {
+    outline: `2px solid ${colors.accent}`,
+    outlineOffset: '2px',
+  },
+  '&:not(:focus-visible)': {
+    outline: 'solid 1px transparent',
+  },
+  '&:not(:focus):not(:focus-within)': {
+    ...mixin.screenReaderOnly,
   },
 });
 
@@ -112,6 +135,7 @@ function Header() {
     <>
       <Container open={open}>
         <Contents className={styles.container}>
+          <SkipToContent href="#start-of-content">{t('header.skip-to-content')}</SkipToContent>
           <h1>
             <LinkButton href={menuMain}>
               <span>{t('header.main')}</span>

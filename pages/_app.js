@@ -7,6 +7,7 @@ function SaemmulterApp({ Component, pageProps }) {
   return (
     <>
       <Header />
+      <div id="start-of-content" />
       <Component {...pageProps} />
       <Footer />
     </>
