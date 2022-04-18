@@ -143,7 +143,7 @@ function Home(props) {
             </div>
             <div className={styles.press}>
               <LinkButton href={menuPrCenter}>
-                <strong role='presentation'>{t('home.description4-a')}</strong>
+                <strong>{t('home.description4-a')}</strong>
                 <p>{t('home.description4-p1')}</p>
                 <p>{t('home.description4-p2')}</p>
                 <p>{t('home.description4-p3')}</p>
