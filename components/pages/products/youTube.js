@@ -102,14 +102,32 @@ function ProductsYouTube() {
           {i18n.language === 'ko' ?
             <>
               {visibleYouTubePlayer
-                ? <YouTubePlayer htmlSrc={youTubeSourceKo} />
-                : <YouTubeButton imageSource={`/youtube.products.ko.png?${(Math.random() * 7).toString(7)}`} onClick={() => setVisibleYouTubePlayer(true)}><i /></YouTubeButton>
+                ?
+                <YouTubePlayer htmlSrc={youTubeSourceKo} />
+                :
+                <YouTubeButton
+                  imageSource={`/youtube.products.ko.png?${(Math.random() * 7).toString(7)}`}
+                  onClick={() => setVisibleYouTubePlayer(true)}
+                  aria-haspopup='true'
+                  aria-label='YouTube 영상 재생'
+                >
+                  <i />
+                </YouTubeButton>
               }
             </> :
             <>
               {visibleYouTubePlayer
-                ? <YouTubePlayer htmlSrc={youTubeSourceEn} />
-                : <YouTubeButton imageSource={`/youtube.products.en.png?${(Math.random() * 7).toString(7)}`} onClick={() => setVisibleYouTubePlayer(true)}><i /></YouTubeButton>
+                ?
+                <YouTubePlayer htmlSrc={youTubeSourceEn} />
+                :
+                <YouTubeButton
+                  imageSource={`/youtube.products.en.png?${(Math.random() * 7).toString(7)}`}
+                  onClick={() => setVisibleYouTubePlayer(true)}
+                  aria-haspopup='true'
+                  aria-label='YouTube video play'
+                >
+                  <i />
+                </YouTubeButton>
               }
             </>
           }
