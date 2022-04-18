@@ -96,16 +96,16 @@ function Download(props) {
         <p>주식회사 샘물터에 대해 더 알고싶다면 샘물터 회사소개서를 다운로드 해주세요.</p>
         <p>주식회사 샘물터 회사소개서에는 제품 소개, 경쟁사 제품 비교, 비즈니스 모델, 시장 규모, 성장 계획 등이 포함되어 있습니다.</p>
       `,
-      previewEn: '/dist/',
-      previewKo: '/dist/',
-      attachEn: '/dist/',
-      attachKo: '/dist/',
+      previewEn: 'https://saemmulter.github.io/attach/documents/saemmulter_introduction.pdf',
+      previewKo: 'https://saemmulter.github.io/attach/documents/saemmulter_introduction.pdf',
+      attachEn: 'https://saemmulter.github.io/attach/downloads/saemmulter_introduction.zip',
+      attachKo: 'https://saemmulter.github.io/attach/downloads/saemmulter_introduction.zip',
     },
     {
       id: 2,
       subjectName: `${t('downloads.subject2')}`,
-      thumbnailEn: `/download-1-en.png?${(Math.random() * 7).toString(7)}`,
-      thumbnailKo: `/download-1-ko.png?${(Math.random() * 7).toString(7)}`,
+      thumbnailEn: `/download-2-en.png?${(Math.random() * 7).toString(7)}`,
+      thumbnailKo: `/download-2-ko.png?${(Math.random() * 7).toString(7)}`,
       term: `${t('downloads.term2')}`,
       descriptionEn: `
         <p>If you want to know more about the Saemmulter’s products, please download our company leaflet.</p>
@@ -115,10 +115,10 @@ function Download(props) {
         <p>주식회사 샘물터의 제품에 대해 더 알고싶다면 샘물터 리플렛을 다운로드 해주세요.</p>
         <p>주식회사 샘물터 리플렛에는 SaaS 서비스 소개와 우물셈의 제품 사양, 그리고 특장점이 포함되어 있습니다.</p>
       `,
-      previewEn: '/dist/',
-      previewKo: '/dist/',
-      attachEn: '/dist/',
-      attachKo: '/dist/',
+      previewEn: 'https://saemmulter.github.io/attach/documents/saemmulter_leaflet.pdf',
+      previewKo: 'https://saemmulter.github.io/attach/documents/saemmulter_leaflet.pdf',
+      attachEn: 'https://saemmulter.github.io/attach/downloads/saemmulter_leaflet.zip',
+      attachKo: 'https://saemmulter.github.io/attach/downloads/saemmulter_leaflet.zip',
     },
   ]
 
