@@ -13,7 +13,7 @@
     }
   },
   "footer": {
-    "company": "Saemmulter Inc.",
+    "company": "Copyright © 2022 Saemmulter Inc. All rights reserved.",
     "address": "Address",
     "social": {
       "facebook": "Facebook official page",
@@ -209,9 +209,7 @@
     "error5": "Please enter your email address in the correct format.",
     "error6": "Content is required. Please enter the contents.",
     "notice": "If you would like to attach the file, please send me an email directly.",
-    "submit": "Submit",
-    "alert-success": "Sending succeeded. We will check and contact you.",
-    "alert-fail": "Send failed. Please try again."
+    "submit": "Submit"
   },
   "address": "403, Social-campus On, 239, Daedeok-daero, Seo-gu, Daejeon, 35229, Rep. of KOREA"
 }

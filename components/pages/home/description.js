@@ -19,7 +19,7 @@ const Container = styled.p({
 
 function HomeDescription({ descriptionPrimary, descriptionSecondary }) {
   return (
-    <Container>
+    <Container role='presentation'>
       {descriptionPrimary}
       <span>{descriptionSecondary}</span>
     </Container>

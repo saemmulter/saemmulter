@@ -126,17 +126,19 @@ function ContactUsRequest() {
       EMAILJS_USER_ID
     )
       .then((result) => {
-        alert('보내기 성공하였습니다. 검토하고 연락드리겠습니다.');
+        alert('Sending succeeded. We will check and contact you. 보내기 성공하였습니다. 검토하고 연락드리겠습니다.');
       }, (error) => {
-        alert('보내기 실패하였습니다. 다시 시도해주세요.');
+        alert('Send failed. Please try again. 보내기 실패하였습니다. 다시 시도해주세요.');
       });
   };
 
   return (
     <Container>
       <p className={styles['caution']}>
-        {i18n.language === 'en' && <strong aria-hidden='true'>Fields marked <b>&#8270;</b> are required.</strong>}
-        {i18n.language === 'ko' && <strong aria-hidden='true'><b>&#8270;</b> 표시가 있는 항목은 필수입니다.</strong>}
+        {i18n.language === 'en'
+          ? <strong aria-hidden='true'>Fields marked <b>&#8270;</b> are required.</strong>
+          : <strong aria-hidden='true'><b>&#8270;</b> 표시가 있는 항목은 필수입니다.</strong>
+        }
       </p>
       <form
         role='form'

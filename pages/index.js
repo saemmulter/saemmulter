@@ -3,7 +3,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'react-i18next';
 import styled from '@emotion/styled';
 import styles from '../styles/Home.module.sass';
-import { Rem, mixin } from '../styles/designSystem';
+import { Rem, mixin, colors } from '../styles/designSystem';
 import withHead from '../components/utilities/withHead';
 import LinkButton from '../components/utilities/linkButton';
 import YouTubePlayer from '../components/utilities/youTubePlayer';
@@ -51,6 +51,9 @@ const YouTubeButton = styled.button(({ imageSource }) => ({
     '& i': {
       filter: 'invert(57%) sepia(70%) saturate(543%) hue-rotate(151deg) brightness(96%) contrast(95%)',
     },
+  },
+  '&:focus-visible': {
+    outline: `${colors.accent} auto ${Rem(5)}`,
   },
 }));
 
@@ -100,14 +103,32 @@ function Home(props) {
               {i18n.language === 'ko' ?
                 <>
                   {visibleYouTubePlayer
-                    ? <YouTubePlayer htmlSrc={youTubeSourceKo} />
-                    : <YouTubeButton imageSource={`/youtube.home.ko.png?${(Math.random() * 7).toString(7)}`} onClick={() => setVisibleYouTubePlayer(true)}><i /></YouTubeButton>
+                    ?
+                    <YouTubePlayer htmlSrc={youTubeSourceKo} />
+                    :
+                    <YouTubeButton
+                      imageSource={`/youtube.home.ko.png?${(Math.random() * 7).toString(7)}`}
+                      onClick={() => setVisibleYouTubePlayer(true)}
+                      aria-haspopup='true'
+                      aria-label='YouTube 영상 재생'
+                    >
+                      <i />
+                    </YouTubeButton>
                   }
                 </> :
                 <>
                   {visibleYouTubePlayer
-                    ? <YouTubePlayer htmlSrc={youTubeSourceEn} />
-                    : <YouTubeButton imageSource={`/youtube.home.en.png?${(Math.random() * 7).toString(7)}`} onClick={() => setVisibleYouTubePlayer(true)}><i /></YouTubeButton>
+                    ?
+                    <YouTubePlayer htmlSrc={youTubeSourceEn} />
+                    :
+                    <YouTubeButton
+                      imageSource={`/youtube.home.en.png?${(Math.random() * 7).toString(7)}`}
+                      onClick={() => setVisibleYouTubePlayer(true)}
+                      aria-haspopup='true'
+                      aria-label='YouTube video play'
+                    >
+                      <i />
+                    </YouTubeButton>
                   }
                 </>
               }
@@ -122,7 +143,7 @@ function Home(props) {
             </div>
             <div className={styles.press}>
               <LinkButton href={menuPrCenter}>
-                <strong>{t('home.description4-a')}</strong>
+                <strong role='presentation'>{t('home.description4-a')}</strong>
                 <p>{t('home.description4-p1')}</p>
                 <p>{t('home.description4-p2')}</p>
                 <p>{t('home.description4-p3')}</p>
