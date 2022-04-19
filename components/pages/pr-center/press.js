@@ -17,8 +17,10 @@ const PressList = styled.div({
 
 const ImageThumbnail = styled.i(({ imageSource }) => ({
   position: 'absolute',
-  top: 0,
-  left: 0,
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  transition: 'all .2s linear',
   display: 'block',
   background: `url(${imageSource}) no-repeat 50% 50%/cover`,
   width: '100%',

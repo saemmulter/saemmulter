@@ -18,6 +18,11 @@ const Container = styled.p({
     fontWeight: fontWeights.regular,
     fontSize: Rem(16),
     color: colors.important,
+    transition: 'all .3s linear',
+    '&:hover, &:focus': {
+      backgroundColor: colors.accent,
+      color: colors.white,
+    },
   },
 });
 
