@@ -44,12 +44,13 @@
           &::after
             content: ''
             display: block
-            width: 16px
-            height: 16px
             border: 2px solid $color-accent
+            margin-left: rem(5)
             border-bottom: 0
             border-left: 0
-            transform: rotate(45deg)
+            width: 16px
+            height: 16px
+            transform: translateX(rem(-5)) rotate(45deg)
 
       .video--you-tube
         position: relative
@@ -85,9 +86,12 @@
 
       .press
         a
-          &:focus, &:hover
-            strong
-              text-decoration: underline
+          display: block
+
+          +mq(minXsmall)
+            &:focus, &:hover
+              strong
+                text-decoration: underline
 
           strong
             display: block

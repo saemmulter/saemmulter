@@ -51,30 +51,38 @@ const FormControl = styled.div({
     display: 'block',
     width: '100%',
     outline: 'none',
-    border: 'none',
-    borderBottom: `2px solid ${colors.background}`,
     fontWeight: fontWeights.regular,
     fontSize: Rem(16),
     color: colors.important,
+    transition: 'border .2s linear',
     '&::placeholder': {
       color: colors.primary,
     },
     '&:focus': {
       borderColor: colors.accent,
     },
+    '&:-webkit-autofill': {
+      backgroundColor: `${colors.accent} !important`,
+      borderBottom: `3px solid ${colors.important} !important`,
+      color: `${colors.important} !important`,
+    },
   },
-})
-
-const FormControlInput = styled.input({
-  padding: `0 ${Rem(15)}`,
-  height: Rem(68),
 });
 
-const FormControlTextArea = styled.textarea({
+const FormControlInput = styled.input(({ isError }) => ({
+  border: 'none',
+  borderBottom: isError ? '2px solid red' : `2px solid ${colors.background}`,
+  padding: `0 ${Rem(15)}`,
+  height: Rem(68),
+}));
+
+const FormControlTextArea = styled.textarea(({ isError }) => ({
+  border: 'none',
+  borderBottom: isError ? '2px solid red' : `2px solid ${colors.background}`,
   padding: Rem(15),
   height: Rem(270),
   resize: 'none',
-});
+}));
 
 const Error = styled.p({
   position: 'absolute',
@@ -97,6 +105,11 @@ const SubmitButton = styled.button({
   fontWeight: fontWeights.bold,
   fontSize: Rem(18),
   color: colors.accent,
+  '&:hover, &:focus': {
+    transition: 'all .3s linear',
+    backgroundColor: colors.accent,
+    color: colors.white,
+  },
 });
 
 SubmitButton.defaultProps = {
@@ -151,12 +164,12 @@ function ContactUsRequest() {
             <FormControl>
               <FormControlInput
                 id={'organization'}
-                element={'input'}
                 placeholder={t('request.placeholder1')}
                 type={'text'}
                 aria-required={'true'}
                 aria-invalid={errors.organization ? 'true' : null}
                 aria-describedby={errors.organization ? 'error-organization' : null}
+                isError={errors.organization ? true : false}
                 {...register
                   ('organization', {
                     required: true,
@@ -177,6 +190,7 @@ function ContactUsRequest() {
                 aria-required={'true'}
                 aria-invalid={errors.contact ? 'true' : null}
                 aria-describedby={errors.contact ? 'error-contact' : null}
+                isError={errors.contact ? true : false}
                 {...register
                   ('contact', {
                     required: true,
@@ -197,6 +211,7 @@ function ContactUsRequest() {
                 aria-required={'true'}
                 aria-invalid={errors.phone ? 'true' : null}
                 aria-describedby={errors.phone ? 'error-phone' : null}
+                isError={errors.phone ? true : false}
                 {...register
                   ('phone', {
                     required: true,
@@ -216,6 +231,7 @@ function ContactUsRequest() {
                 type={'text'}
                 aria-invalid={errors.fax ? 'true' : null}
                 aria-describedby={errors.fax ? 'error-fax' : null}
+                isError={errors.fax ? true : false}
                 {...register
                   ('fax', {
                     required: false,
@@ -236,6 +252,7 @@ function ContactUsRequest() {
                 aria-required={'true'}
                 aria-invalid={errors.email ? 'true' : null}
                 aria-describedby={errors.email ? 'error-email' : null}
+                isError={errors.email ? true : false}
                 {...register
                   ('email', {
                     required: true,
@@ -257,6 +274,7 @@ function ContactUsRequest() {
                 aria-required={'true'}
                 aria-invalid={errors.contents ? 'true' : null}
                 aria-describedby={errors.contents ? 'error-context' : null}
+                isError={errors.contents ? true : false}
                 {...register
                   ('contents', {
                     required: true
