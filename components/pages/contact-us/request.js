@@ -100,7 +100,7 @@ const SubmitButton = styled.button({
 });
 
 SubmitButton.defaultProps = {
-  type: 'button',
+  type: 'submit',
 };
 
 function ContactUsRequest() {
