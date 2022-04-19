@@ -1,6 +1,6 @@
-import React, { useState, useRef } from 'react';
+import React, { useRef } from 'react';
 import { useForm } from 'react-hook-form';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 import { useTranslation } from 'react-i18next';
 import styled from '@emotion/styled'
 import styles from '../../../styles/Contactus.module.sass'
