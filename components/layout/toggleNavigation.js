@@ -53,7 +53,7 @@ function ToggleNavigation({ open, setOpen }) {
 
   return (
     <ButtonNavigation
-      aria-label={t('header.label.menu-open')}
+      aria-label={open ? t('header.label.menu-close') : t('header.label.menu-open')}
       aria-pressed={open}
       open={open}
       onClick={() => setOpen(!open)}

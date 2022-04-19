@@ -17,7 +17,7 @@ const withHead = (Component, pageName, pageRouter) => {
       var siteName = 'Saemmulter'
     }
 
-    const domain = `https://saemmulter.vercel.app/`
+    const domain = `https://saemmulter.com/`
     const currentUrl = `${domain}${i18n.language}/${pageRouter}`
 
     return (
