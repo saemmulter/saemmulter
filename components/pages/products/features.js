@@ -50,8 +50,8 @@ function ProductsFeatures() {
       icon: `${images.icons.products.features.features1}`,
       term1: `${t('feature.term1-1')}`,
       term2: `${t('feature.term1-2')}`,
-      description1: `${t('feature.description3-1')}`,
-      description2: `${t('feature.description3-2')}`,
+      description1: `${t('feature.description1-1')}`,
+      description2: `${t('feature.description1-2')}`,
     },
     {
       id: 2,
