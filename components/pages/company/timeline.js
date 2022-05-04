@@ -65,6 +65,18 @@ const DueDate = styled.span(({ dueDateShow }) => ({
   display: dueDateShow ? null : 'none',
 }));
 
+function Timeline2022({ y2022Timeline }) {
+  return (
+    <>
+      <TimelineDate>
+        <time dateTime={y2022Timeline.dateTimeStartMachine}>{y2022Timeline.dateTimeStartHuman}</time>
+        <DueDate dueDateShow={y2022Timeline.dateTimeEndDisplay}> - <time dateTime={y2022Timeline.dateTimeEndMachine}>{y2022Timeline.dateTimeEndHuman}</time></DueDate>
+      </TimelineDate>
+      <TimelineSummary>{y2022Timeline.timelineSummary}</TimelineSummary>
+    </>
+  )
+}
+
 function Timeline2021({ y2021Timeline }) {
   return (
     <>
@@ -104,6 +116,18 @@ function Timeline2019({ y2019Timeline }) {
 function CompanyTimeline() {
   const { t } = useTranslation('common')
 
+  const y2022Timelines = [
+    {
+      id: 1,
+      dateTimeStartMachine: '04-12',
+      dateTimeStartHuman: '04/12',
+      dateTimeEndMachine: '04-12',
+      dateTimeEndHuman: '04/12',
+      dateTimeEndDisplay: false,
+      timelineSummary: `${t('timeline.y2022i01')}`,
+    },
+  ]
+
   const y2021Timelines = [
     {
       id: 1,
@@ -116,8 +140,8 @@ function CompanyTimeline() {
     },
     {
       id: 2,
-      dateTimeStartMachine: '06-29',
-      dateTimeStartHuman: '06/29',
+      dateTimeStartMachine: '03-31',
+      dateTimeStartHuman: '03/31',
       dateTimeEndMachine: '12-31',
       dateTimeEndHuman: '12/31',
       dateTimeEndDisplay: true,
@@ -150,6 +174,15 @@ function CompanyTimeline() {
       dateTimeEndDisplay: true,
       timelineSummary: `${t('timeline.y2021i05')}`,
     },
+    {
+      id: 6,
+      dateTimeStartMachine: '12-30',
+      dateTimeStartHuman: '12/30',
+      dateTimeEndMachine: '12-30',
+      dateTimeEndHuman: '12/30',
+      dateTimeEndDisplay: false,
+      timelineSummary: `${t('timeline.y2021i06')}`,
+    },
   ];
 
   const y2020Timelines = [
@@ -173,66 +206,93 @@ function CompanyTimeline() {
     },
     {
       id: 3,
+      dateTimeStartMachine: '06-01',
+      dateTimeStartHuman: '06/01',
+      dateTimeEndMachine: '02-28',
+      dateTimeEndHuman: '02/28',
+      dateTimeEndDisplay: true,
+      timelineSummary: `${t('timeline.y2020i03')}`,
+    },
+    {
+      id: 4,
+      dateTimeStartMachine: '06-07',
+      dateTimeStartHuman: '06/07',
+      dateTimeEndMachine: '11-28',
+      dateTimeEndHuman: '11/28',
+      dateTimeEndDisplay: true,
+      timelineSummary: `${t('timeline.y2020i04')}`,
+    },
+    {
+      id: 5,
       dateTimeStartMachine: '07-23',
       dateTimeStartHuman: '07/23',
       dateTimeEndMachine: '07-23',
       dateTimeEndHuman: '07/23',
       dateTimeEndDisplay: false,
-      timelineSummary: `${t('timeline.y2020i03')}`,
+      timelineSummary: `${t('timeline.y2020i05')}`,
     },
     {
-      id: 4,
+      id: 6,
+      dateTimeStartMachine: '07-23',
+      dateTimeStartHuman: '07/23',
+      dateTimeEndMachine: '07-25',
+      dateTimeEndHuman: '07/25',
+      dateTimeEndDisplay: true,
+      timelineSummary: `${t('timeline.y2020i06')}`,
+    },
+    {
+      id: 7,
       dateTimeStartMachine: '08-04',
       dateTimeStartHuman: '08/04',
       dateTimeEndMachine: '08-04',
       dateTimeEndHuman: '08/04',
       dateTimeEndDisplay: false,
-      timelineSummary: `${t('timeline.y2020i04')}`,
+      timelineSummary: `${t('timeline.y2020i07')}`,
     },
     {
-      id: 5,
+      id: 8,
       dateTimeStartMachine: '10-19',
       dateTimeStartHuman: '10/19',
       dateTimeEndMachine: '10-23',
       dateTimeEndHuman: '10/23',
       dateTimeEndDisplay: true,
-      timelineSummary: `${t('timeline.y2020i05')}`,
+      timelineSummary: `${t('timeline.y2020i08')}`,
     },
     {
-      id: 6,
+      id: 9,
       dateTimeStartMachine: '11-09',
       dateTimeStartHuman: '11-09',
       dateTimeEndMachine: '11-09',
       dateTimeEndHuman: '11/09',
       dateTimeEndDisplay: false,
-      timelineSummary: `${t('timeline.y2020i06')}`,
+      timelineSummary: `${t('timeline.y2020i09')}`,
     },
     {
-      id: 7,
+      id: 10,
       dateTimeStartMachine: '11-21',
       dateTimeStartHuman: '11/21',
       dateTimeEndMachine: '11-21',
       dateTimeEndHuman: '11/21',
       dateTimeEndDisplay: false,
-      timelineSummary: `${t('timeline.y2020i07')}`,
+      timelineSummary: `${t('timeline.y2020i10')}`,
     },
     {
-      id: 8,
+      id: 11,
       dateTimeStartMachine: '12-09',
       dateTimeStartHuman: '12/09',
       dateTimeEndMachine: '12-09',
       dateTimeEndHuman: '12/09',
       dateTimeEndDisplay: false,
-      timelineSummary: `${t('timeline.y2020i08')}`,
+      timelineSummary: `${t('timeline.y2020i11')}`,
     },
     {
-      id: 9,
+      id: 12,
       dateTimeStartMachine: '12-30',
       dateTimeStartHuman: '12/30',
       dateTimeEndMachine: '12-06',
       dateTimeEndHuman: '12/06',
       dateTimeEndDisplay: false,
-      timelineSummary: `${t('timeline.y2020i09')}`,
+      timelineSummary: `${t('timeline.y2020i12')}`,
     },
   ]
 
@@ -268,6 +328,17 @@ function CompanyTimeline() {
 
   return (
     <TimelineList>
+      <TimelineItem>
+        <TimelineHeadline><time dateTime='2022'>2022</time></TimelineHeadline>
+        <TimelineDefinition>
+          {y2022Timelines.map(y2022Timeline => (
+            <Timeline2022
+              y2022Timeline={y2022Timeline}
+              key={y2022Timeline.id}
+            />
+          ))}
+        </TimelineDefinition>
+      </TimelineItem>
       <TimelineItem>
         <TimelineHeadline><time dateTime='2021'>2021</time></TimelineHeadline>
         <TimelineDefinition>
