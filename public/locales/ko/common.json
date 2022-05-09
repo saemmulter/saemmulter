@@ -7,9 +7,10 @@
     "pr-center": "보도자료",
     "downloads": "다운로드",
     "contact-us": "문의",
+    "active": "현재 메뉴",
     "label": {
-      "menu-open": "메뉴 열기",
-      "menu-close": "메뉴 닫기"
+      "menu-open": "메뉴 닫힘",
+      "menu-close": "메뉴 열림"
     }
   },
   "footer": {
