@@ -52,11 +52,11 @@ function GlobalNavigation({ open, setOpen }) {
       </div>
       <Dummy />
       <ol data-router={router.pathname} onClick={() => setOpen(!open)}>
-        <li><LinkButton href={menuCompany}>{t('header.company')}</LinkButton></li>
-        <li><LinkButton href={menuProducts}>{t('header.products')}</LinkButton></li>
-        <li><LinkButton href={menuPrCenter}>{t('header.pr-center')}</LinkButton></li>
-        <li><LinkButton href={menuDownloads}>{t('header.downloads')}</LinkButton></li>
-        <li><LinkButton href={menuContactUs}>{t('header.contact-us')}</LinkButton></li>
+        <li><LinkButton href={menuCompany} aria-label={router.pathname === '/company' ? t('header.active') : null}>{t('header.company')}</LinkButton></li>
+        <li><LinkButton href={menuProducts} aria-label={router.pathname === '/products' ? t('header.active') : null}>{t('header.products')}</LinkButton></li>
+        <li><LinkButton href={menuPrCenter} aria-label={router.pathname === '/pr-center' ? t('header.active') : null}>{t('header.pr-center')}</LinkButton></li>
+        <li><LinkButton href={menuDownloads} aria-label={router.pathname === '/downloads' ? t('header.active') : null}>{t('header.downloads')}</LinkButton></li>
+        <li><LinkButton href={menuContactUs} aria-label={router.pathname === '/contact-us' ? t('header.active') : null}>{t('header.contact-us')}</LinkButton></li>
       </ol>
       <Dummy />
       <ul>
@@ -67,7 +67,7 @@ function GlobalNavigation({ open, setOpen }) {
               <LinkLanguage
                 href={`/ko${router.pathname}`}
                 locale='ko'
-                aria-label='한국어 선택'
+                aria-label='한국어 선택 / Choose Korean'
                 isKorean={true}
               >
                 Ko
@@ -77,7 +77,7 @@ function GlobalNavigation({ open, setOpen }) {
               <LinkLanguage
                 href={`/en${router.pathname}`}
                 locale='en'
-                aria-label='영어 선택'
+                aria-label='영어 선택 / Choose English'
                 isKorean={false}
               >
                 En
@@ -90,7 +90,7 @@ function GlobalNavigation({ open, setOpen }) {
               <LinkLanguage
                 href={`/ko${router.pathname}`}
                 locale='ko'
-                aria-label='Choose Korean'
+                aria-label='Choose Korean / 한국어 선택'
                 isKorean={false}
               >
                 Ko
@@ -100,7 +100,7 @@ function GlobalNavigation({ open, setOpen }) {
               <LinkLanguage
                 href={`/en${router.pathname}`}
                 locale='en'
-                aria-label='Choose English'
+                aria-label='Choose English / 영어 선택'
                 isKorean={true}
               >
                 En
