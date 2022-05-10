@@ -60,54 +60,26 @@ function GlobalNavigation({ open, setOpen }) {
       </ol>
       <Dummy />
       <ul>
-        {i18n.language === 'ko'
-          ?
-          <>
-            <li>
-              <LinkLanguage
-                href={`/ko${router.pathname}`}
-                locale='ko'
-                aria-label='한국어 선택 / Choose Korean'
-                isKorean={true}
-              >
-                Ko
-              </LinkLanguage>
-            </li>
-            <li>
-              <LinkLanguage
-                href={`/en${router.pathname}`}
-                locale='en'
-                aria-label='영어 선택 / Choose English'
-                isKorean={false}
-              >
-                En
-              </LinkLanguage>
-            </li>
-          </>
-          :
-          <>
-            <li>
-              <LinkLanguage
-                href={`/ko${router.pathname}`}
-                locale='ko'
-                aria-label='Choose Korean / 한국어 선택'
-                isKorean={false}
-              >
-                Ko
-              </LinkLanguage>
-            </li>
-            <li>
-              <LinkLanguage
-                href={`/en${router.pathname}`}
-                locale='en'
-                aria-label='Choose English / 영어 선택'
-                isKorean={true}
-              >
-                En
-              </LinkLanguage>
-            </li>
-          </>
-        }
+        <li>
+          <LinkLanguage
+            href={`/ko${router.pathname}`}
+            locale='ko'
+            aria-label={i18n.language === 'ko' ? '한국어 선택 / Choose Korean' : 'Choose Korean / 한국어 선택'}
+            isKorean={i18n.language === 'ko' ? true : false}
+          >
+            Ko
+          </LinkLanguage>
+        </li>
+        <li>
+          <LinkLanguage
+            href={`/en${router.pathname}`}
+            locale='en'
+            aria-label={i18n.language === 'ko' ? '영어 선택 / Choose English' : 'Choose English / 영어 선택'}
+            isKorean={i18n.language === 'ko' ? false : true}
+          >
+            En
+          </LinkLanguage>
+        </li>
       </ul>
     </NavigationBar>
   )
