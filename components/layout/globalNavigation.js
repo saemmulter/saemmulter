@@ -47,7 +47,7 @@ function GlobalNavigation({ open, setOpen }) {
 
   const menuCompany = `/${i18n.language}/company`
   const menuProducts = `/${i18n.language}/products`
-  const menuContents = `https://saemmulter.tistory.com/`
+  const menuContents = `https://contents.saemmulter.com/`
   const menuPrCenter = `/${i18n.language}/pr-center`
   const menuDownloads = `/${i18n.language}/downloads`
   const menuContactUs = `/${i18n.language}/contact-us`
