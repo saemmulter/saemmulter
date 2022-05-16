@@ -39,6 +39,7 @@ function GlobalNavigation({ open, setOpen }) {
 
   const menuCompany = `/${i18n.language}/company`
   const menuProducts = `/${i18n.language}/products`
+  const menuContents = `https://saemmulter.tistory.com/`
   const menuPrCenter = `/${i18n.language}/pr-center`
   const menuDownloads = `/${i18n.language}/downloads`
   const menuContactUs = `/${i18n.language}/contact-us`
@@ -54,6 +55,7 @@ function GlobalNavigation({ open, setOpen }) {
       <ol data-router={router.pathname} onClick={() => setOpen(!open)}>
         <li><LinkButton href={menuCompany} aria-label={router.pathname === '/company' ? t('header.active') : null}>{t('header.company')}</LinkButton></li>
         <li><LinkButton href={menuProducts} aria-label={router.pathname === '/products' ? t('header.active') : null}>{t('header.products')}</LinkButton></li>
+        {i18n.language === 'ko' ? <li><a href={menuContents}>콘텐츠</a></li> : null}
         <li><LinkButton href={menuPrCenter} aria-label={router.pathname === '/pr-center' ? t('header.active') : null}>{t('header.pr-center')}</LinkButton></li>
         <li><LinkButton href={menuDownloads} aria-label={router.pathname === '/downloads' ? t('header.active') : null}>{t('header.downloads')}</LinkButton></li>
         <li><LinkButton href={menuContactUs} aria-label={router.pathname === '/contact-us' ? t('header.active') : null}>{t('header.contact-us')}</LinkButton></li>
