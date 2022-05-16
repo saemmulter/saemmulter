@@ -68,8 +68,8 @@ function Home(props) {
   const menuProducts = `/${i18n.language}/products`
   const menuPrCenter = `/${i18n.language}/pr-center`
 
-  const youTubeSourceKo = `jnb7td19VbY`
-  const youTubeSourceEn = `jnb7td19VbY`
+  const youTubeSourceKo = `3rjHKI28dx0`
+  const youTubeSourceEn = `3rjHKI28dx0`
 
   const [visibleYouTubePlayer, setVisibleYouTubePlayer] = useState(false);
 
@@ -100,37 +100,33 @@ function Home(props) {
               <SubjectLeft subjectLeft={t('home.subject3')} />
             </div>
             <div className={styles['video--you-tube']}>
-              {i18n.language === 'ko' ?
-                <>
-                  {visibleYouTubePlayer
-                    ?
-                    <YouTubePlayer htmlSrc={youTubeSourceKo} />
+              {visibleYouTubePlayer
+                ?
+                <YouTubePlayer htmlSrc={
+                  i18n.language === 'ko' ?
+                    youTubeSourceKo
                     :
-                    <YouTubeButton
-                      imageSource={`/youtube.home.ko.png?${(Math.random() * 7).toString(7)}`}
-                      onClick={() => setVisibleYouTubePlayer(true)}
-                      aria-haspopup='true'
-                      aria-label='YouTube 영상 재생'
-                    >
-                      <i />
-                    </YouTubeButton>
+                    youTubeSourceEn
+                } />
+                :
+                <YouTubeButton
+                  imageSource={
+                    i18n.language === 'ko' ?
+                      `/youtube.home.ko.png?${(Math.random() * 7).toString(7)}`
+                      :
+                      `/youtube.home.en.png?${(Math.random() * 7).toString(7)}`
                   }
-                </> :
-                <>
-                  {visibleYouTubePlayer
-                    ?
-                    <YouTubePlayer htmlSrc={youTubeSourceEn} />
-                    :
-                    <YouTubeButton
-                      imageSource={`/youtube.home.en.png?${(Math.random() * 7).toString(7)}`}
-                      onClick={() => setVisibleYouTubePlayer(true)}
-                      aria-haspopup='true'
-                      aria-label='YouTube video play'
-                    >
-                      <i />
-                    </YouTubeButton>
+                  onClick={() => setVisibleYouTubePlayer(true)}
+                  aria-haspopup='true'
+                  aria-label={
+                    i18n.language === 'ko' ?
+                      'YouTube 영상 재생'
+                      :
+                      'YouTube video play'
                   }
-                </>
+                >
+                  <i />
+                </YouTubeButton>
               }
             </div>
           </section>
