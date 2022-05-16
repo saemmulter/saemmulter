@@ -19,6 +19,14 @@ const NavigationBar = styled.nav(({ open }) => ({
   },
 }));
 
+const MenuLink = styled(LinkButton)(({ currentRouter }) => ({
+  color: currentRouter ? colors.accent : colors.default,
+}));
+
+const BlogLink = styled.a({
+  color: colors.default,
+});
+
 const ImageSlogan = styled.i({
   width: Rem(177),
   height: Rem(10),
@@ -52,13 +60,53 @@ function GlobalNavigation({ open, setOpen }) {
         <ImageSlogan aria-label='Clean Groundwater Tech' />
       </div>
       <Dummy />
-      <ol data-router={router.pathname} onClick={() => setOpen(!open)}>
-        <li><LinkButton href={menuCompany} aria-label={router.pathname === '/company' ? t('header.active') : null}>{t('header.company')}</LinkButton></li>
-        <li><LinkButton href={menuProducts} aria-label={router.pathname === '/products' ? t('header.active') : null}>{t('header.products')}</LinkButton></li>
-        {i18n.language === 'ko' ? <li><a href={menuContents}>콘텐츠</a></li> : null}
-        <li><LinkButton href={menuPrCenter} aria-label={router.pathname === '/pr-center' ? t('header.active') : null}>{t('header.pr-center')}</LinkButton></li>
-        <li><LinkButton href={menuDownloads} aria-label={router.pathname === '/downloads' ? t('header.active') : null}>{t('header.downloads')}</LinkButton></li>
-        <li><LinkButton href={menuContactUs} aria-label={router.pathname === '/contact-us' ? t('header.active') : null}>{t('header.contact-us')}</LinkButton></li>
+      <ol onClick={() => setOpen(!open)}>
+        <li>
+          <MenuLink
+            href={menuCompany}
+            currentRouter={router.pathname === '/company' ? true : false}
+            aria-label={router.pathname === '/company' ? t('header.active') : null}
+          >
+            {t('header.company')}
+          </MenuLink>
+        </li>
+        <li>
+          <MenuLink
+            href={menuProducts}
+            currentRouter={router.pathname === '/products' ? true : false}
+            aria-label={router.pathname === '/products' ? t('header.active') : null}
+          >
+            {t('header.products')}
+          </MenuLink>
+        </li>
+        {i18n.language === 'ko' ? <li><BlogLink href={menuContents}>콘텐츠</BlogLink></li> : null}
+        <li>
+          <MenuLink
+            href={menuPrCenter}
+            currentRouter={router.pathname === '/pr-center' ? true : false}
+            aria-label={router.pathname === '/pr-center' ? t('header.active') : null}
+          >
+            {t('header.pr-center')}
+          </MenuLink>
+        </li>
+        <li>
+          <MenuLink
+            href={menuDownloads}
+            currentRouter={router.pathname === '/downloads' ? true : false}
+            aria-label={router.pathname === '/downloads' ? t('header.active') : null}
+          >
+            {t('header.downloads')}
+          </MenuLink>
+        </li>
+        <li>
+          <MenuLink
+            href={menuContactUs}
+            currentRouter={router.pathname === '/contact-us' ? true : false}
+            aria-label={router.pathname === '/contact-us' ? t('header.active') : null}
+          >
+            {t('header.contact-us')}
+          </MenuLink>
+        </li>
       </ol>
       <Dummy />
       <ul>

@@ -46,13 +46,6 @@
   ol
     display: flex
 
-    &[data-router='/company'] li:nth-of-type(1) a,
-    &[data-router='/products'] li:nth-of-type(2) a,
-    &[data-router='/pr-center'] li:nth-of-type(3) a,
-    &[data-router='/downloads'] li:nth-of-type(4) a,
-    &[data-router='/contact-us'] li:nth-of-type(5) a
-      +color(accent)
-
     +mq(maxTablet)
       flex-direction: column
       padding-top: rem(20)
@@ -69,7 +62,6 @@
       +font-weight(black)
       font-size: rem(16)
       text-transform: uppercase
-      +color(default)
 
       &:focus, &:hover
         +color(accent)
