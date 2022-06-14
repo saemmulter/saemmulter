@@ -1,11 +1,9 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 
-function Document() {
+export default function Document() {
   return (
     <Html>
-      <Head>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css" />
-      </Head>
+      <Head />
       <body>
         <Main />
         <NextScript />
@@ -13,5 +11,3 @@ function Document() {
     </Html>
   )
 }
-
-export default Document;
