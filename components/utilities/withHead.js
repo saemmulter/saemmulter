@@ -39,7 +39,6 @@ const withHead = (Component, pageName, pageRouter) => {
           <meta property='og:image' content={`${domain}${i18n.language}-saemmulter-og-image.png?${(Math.random() * 7).toString(7)}`} />
           <meta property='og:type' content='website' />
           <meta property='og:site_name' content={siteName} />
-          <meta name="naver-site-verification" content="2bcca5cc62ca1fa7ff4954fdcb935cb0d601c5d8" />
         </Head>
         <Component {...props} />
       </>
