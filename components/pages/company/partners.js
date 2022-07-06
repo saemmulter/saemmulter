@@ -88,12 +88,12 @@ function CompanyPartners() {
 
   return (
     <PartnersList className={styles['partners-list']}>
-      <li><ImageLogoAmmonteck isKorean={isKorean} aria-label={t('partners.org1')} /></li>
+      {/* <li><ImageLogoAmmonteck isKorean={isKorean} aria-label={t('partners.org1')} /></li> */}
       <li><ImageLogoBakertilly isKorean={isKorean} aria-label={t('partners.org2')} /></li>
       <li><ImageLogoEoc isKorean={isKorean} aria-label={t('partners.org3')} /></li>
       <li><ImageLogoIlabcollective isKorean={isKorean} aria-label={t('partners.org4')} /></li>
       <li><ImageLogoGgulb isKorean={isKorean} aria-label={t('partners.org5')} /></li>
-      <li><ImageLogoSaeon isKorean={isKorean} aria-label={t('partners.org6')} /></li>
+      {/* <li><ImageLogoSaeon isKorean={isKorean} aria-label={t('partners.org6')} /></li> */}
       <li><ImageLogoKwater isKorean={isKorean} aria-label={t('partners.org7')} /></li>
       <li><ImageLogoInnoplus isKorean={isKorean} aria-label={t('partners.org8')} /></li>
       <li><ImageLogoKmt isKorean={isKorean} aria-label={t('partners.org9')} /></li>
