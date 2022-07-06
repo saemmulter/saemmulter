@@ -261,7 +261,7 @@ function CompanyTimeline() {
     {
       id: 9,
       dateTimeStartMachine: '11-09',
-      dateTimeStartHuman: '11-09',
+      dateTimeStartHuman: '11/09',
       dateTimeEndMachine: '11-09',
       dateTimeEndHuman: '11/09',
       dateTimeEndDisplay: false,
