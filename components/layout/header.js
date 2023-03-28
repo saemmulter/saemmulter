@@ -118,11 +118,12 @@ const useOnClickOutside = (ref, handler) => {
 
 function Header() {
   const { i18n, t } = useTranslation('common')
+  let isKorean = true
 
   if (i18n.language === 'ko') {
-    var isKorean = true
+    isKorean = true
   } else {
-    var isKorean = false
+    isKorean = true
   }
 
   const menuMain = `/${i18n.language}`

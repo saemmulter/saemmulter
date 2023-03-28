@@ -12,14 +12,20 @@ const LinkButton = ({ href, ...rest }) => {
 
   if (href.startsWith('/')) {
     return (
-      <Link href={href}>
-        <a {...rest} />
-      </Link>
+      <Link
+        href={href}
+        {...rest}
+      />
     )
   }
 
   if (!href.startsWith('http')) {
-    return <a href={href} {...rest} />
+    return (
+      <a
+        href={href}
+        {...rest}
+      />
+    )
   }
 
   return (
