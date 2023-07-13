@@ -43,13 +43,13 @@ const LinkSocialYouTube = styled.i({
   backgroundImage: `url(${images.logos.social.youTube})`,
 });
 
-// const LinkSocialNaverBlog = styled.i({
-//   backgroundImage: `url(${images.logos.social.naverBlog})`,
-// });
-
-const LinkSocialAlibaba = styled.i({
-  backgroundImage: `url(${images.logos.social.alibaba})`,
+const LinkSocialNaverBlog = styled.i({
+  backgroundImage: `url(${images.logos.social.naverBlog})`,
 });
+
+// const LinkSocialAlibaba = styled.i({
+//   backgroundImage: `url(${images.logos.social.alibaba})`,
+// });
 
 function Footer() {
   const { i18n, t } = useTranslation('common')
@@ -81,8 +81,8 @@ function Footer() {
           <li><LinkButton href='https://www.facebook.com/CleanGroundwaterLab/'><LinkSocialFacebook aria-label={t('footer.social.facebook')}></LinkSocialFacebook></LinkButton></li>
           <li><LinkButton href='https://www.instagram.com/cleangroundwater.tech'><LinkSocialInstagram aria-label={t('footer.social.instagram')}></LinkSocialInstagram></LinkButton></li>
           <li><LinkButton href='https://www.youtube.com/channel/UCNPjWF6bT6GyMOPQtIDbh5g'><LinkSocialYouTube aria-label={t('footer.social.youtube')}></LinkSocialYouTube></LinkButton></li>
-          {/* <li><LinkButton href='https://blog.naver.com/cgwater'><LinkSocialNaverBlog aria-label={t('footer.social.naver-blog')}></LinkSocialNaverBlog></LinkButton></li> */}
-          <li><LinkButton href='https://kr19010829141zsds.trustpass.alibaba.com/'><LinkSocialAlibaba aria-label={t('footer.social.alibaba')}></LinkSocialAlibaba></LinkButton></li>
+          <li><LinkButton href='https://blog.naver.com/cgwater'><LinkSocialNaverBlog aria-label={t('footer.social.naver-blog')}></LinkSocialNaverBlog></LinkButton></li>
+          {/* <li><LinkButton href='https://kr19010829141zsds.trustpass.alibaba.com/'><LinkSocialAlibaba aria-label={t('footer.social.alibaba')}></LinkSocialAlibaba></LinkButton></li> */}
         </ul>
       </Contents>
     </Container>
