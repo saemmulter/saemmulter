@@ -68,8 +68,8 @@ function Home(props) {
   const menuProducts = `/${i18n.language}/products`
   const menuPrCenter = `/${i18n.language}/pr-center`
 
-  const youTubeSourceKo = `3rjHKI28dx0`
-  const youTubeSourceEn = `3rjHKI28dx0`
+  const youTubeSourceKo = `z_70BDPrsJo`
+  const youTubeSourceEn = `z_70BDPrsJo`
 
   const [visibleYouTubePlayer, setVisibleYouTubePlayer] = useState(false);
 
