@@ -1,5 +1,5 @@
 function SaemmulterEmail() {
-  return <a href='mailto:cgwaterlb@gmail.com'>cgwaterlb@gmail.com</a>
+  return <a href='mailto:yoonpsun@saemmulter.com'>yoonpsun@saemmulter.com</a>
 }
 
 export default SaemmulterEmail;

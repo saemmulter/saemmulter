@@ -186,8 +186,8 @@
     "button2": "Download",
     "subject1": "Company Introduction",
     "subject2": "Company Leaflet",
-    "term1": "Company Introduction ver_01",
-    "term2": "Company Introduction ver_02 (Korean)"
+    "term1": "Company Introduction ver.20230516",
+    "term2": "Company Leaflet ver.20230516"
   },
   "contact-us": {
     "subject1": "Location",
@@ -218,5 +218,8 @@
     "notice": "If you would like to attach the file, please send me an email directly.",
     "submit": "Submit"
   },
-  "address": "403, Social-campus On, 239, Daedeok-daero, Seo-gu, Daejeon, 35229, Rep. of KOREA"
+  "address": {
+    "primary": "Head office) D2 304-ho A-dong, 45, Yangcheong 4-gil, Ochang-eup, Cheongwon-gu, Cheongju-si, Chungcheongbuk-do, 28116, Rep. of KOREA",
+    "secondary": "Branch office) 403, Social-campus On, 239, Daedeok-daero, Seo-gu, Daejeon, 35229, Rep. of KOREA"
+  }
 }
