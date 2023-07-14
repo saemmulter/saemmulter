@@ -42,6 +42,9 @@ const ParagraphSecondary = styled.p({
   fontSize: Rem(18),
   lineHeight: 1.22222222,
   textAlign: 'center',
+  '& span': {
+    display: 'block',
+  },
 });
 
 function ProductsWoomulsem() {
@@ -51,7 +54,10 @@ function ProductsWoomulsem() {
     <MainProduct>
       <ImageItem><ImageProduct /></ImageItem>
       <ParagraphPrimary><strong>{t('products.description1-1')}</strong></ParagraphPrimary>
-      <ParagraphSecondary>{t('products.description1-2')}</ParagraphSecondary>
+      <ParagraphSecondary>
+        {t('products.description1-2')}
+        <span>{t('products.description1-3')}</span>
+      </ParagraphSecondary>
     </MainProduct>
   )
 }

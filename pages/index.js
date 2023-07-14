@@ -33,7 +33,7 @@ const ImageItem = styled.div({
 const ImageProduct = styled.i({
   background: `url(${ImageProductSource}) no-repeat 50% 50%/contain`,
   display: 'block',
-  paddingTop: '30%',
+  paddingTop: '15%',
   height: 0,
   ...mixin.imageRendering,
 });
