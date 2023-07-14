@@ -173,7 +173,8 @@ function Carousel() {
         <Item>
           <ImageCarouselProducts
             src={`/bg-main-carousel.png`}
-            alt='' />
+            alt=''
+          />
           <div className='item'>
             <strong>
               {t('carousel.subject2-1')}
